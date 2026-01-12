@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Shows | Hyenas Comedy Nightclub</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Browse upcoming stand-up comedy shows at Hyenas Comedy Nightclub in Dallas, Fort Worth, and Albuquerque.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Roboto+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/hyenas-te-system.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="te-nav">
+        <div class="te-container">
+            <div class="te-nav-inner">
+                <a href="/" class="te-logo">
+                    <img src="https://cdn.prod.website-files.com/626314d81c6e619157def12e/62634a8994907cbc6e923aa0_new-logo.png"
+                        alt="Hyenas Comedy Nightclub" style="height: 50px; width: auto; display: block;">
+                </a>
+
+                <button class="te-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="te-nav-menu">
+                    <li><a href="/locations/fortworth" class="te-nav-link">FORT WORTH</a></li>
+                    <li><a href="/locations/dallas" class="te-nav-link">DALLAS</a></li>
+                    <li><a href="/locations/redroom" class="te-nav-link">RED ROOM</a></li>
+                    <li><a href="/locations/albuquerque" class="te-nav-link">ABQ</a></li>
+                    <li><a href="/shows" class="te-nav-link active">SHOWS & TICKETS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER SECTION -->
+    <section class="te-section"
+        style="background: var(--te-black); color: var(--te-white); padding-bottom: var(--space-8); padding-top: var(--space-12);">
+        <div class="te-container">
+            <h1 class="font-black text-uppercase" style="font-size: var(--text-4xl); margin-bottom: var(--space-6);">
+                FIND YOUR SHOW</h1>
+
+            <!-- Search Input -->
+            <div style="max-width: 600px;">
+                <input type="text" placeholder="🔍 Search by comedian name..."
+                    style="width: 100%; background: transparent; border: 2px solid var(--te-white); color: var(--te-white); padding: var(--space-4); font-family: var(--font-mono); font-size: var(--text-base); outline: none;">
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTER BAR (Sticky) -->
+    <div class="te-filter-bar" style="position: sticky; top: 70px; z-index: 99; margin-bottom: 0; border-top: none;">
+        <div class="te-container" style="display: flex; gap: var(--space-4); align-items: center; overflow-x: auto;">
+            <span class="te-filter-label" style="white-space: nowrap;">FILTERS:</span>
+            <button class="te-filter-btn active">ALL</button>
+            <button class="te-filter-btn">FW</button>
+            <button class="te-filter-btn">DAL</button>
+            <button class="te-filter-btn">ABQ</button>
+            <button class="te-filter-btn">RR</button>
+
+            <!-- Separator -->
+            <div style="width: 1px; height: 24px; background: var(--te-gray-light); margin: 0 var(--space-2);"></div>
+
+            <!-- Date Range (Visual only for now) -->
+            <button class="te-filter-btn">DATE RANGE ▼</button>
+        </div>
+    </div>
+
+    <!-- SHOWS GRID -->
+    <section class="te-section" style="background: var(--te-white); min-height: 50vh;">
+        <div class="te-container">
+            <!-- Results Meta -->
+            <div class="te-section-meta" style="margin-bottom: var(--space-6);">
+                <span id="results-count">12 SHOWS FOUND</span>
+            </div>
+
+            <div class="te-grid te-grid-4" id="events-grid">
+                <!-- Example Cards (Reusing existing card structure) -->
+
+                <!-- Card 1 -->
+                <article class="te-card te-animate-in" data-location="fortworth">
+                    <div class="te-card-header">
+                        <div class="te-location-badge fort-worth">
+                            <span class="loc-id">FW-TX</span>
+                            <span class="loc-name">FORT WORTH</span>
+                        </div>
+                    </div>
+                    <a href="/events/david-koechner" class="te-image-container">
+                        <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2853111880148553046"
+                            alt="David Koechner">
+                        <div class="te-overlay-scan"></div>
+                    </a>
+                    <div class="te-content">
+                        <div class="te-artist-block">
+                            <h3 class="te-artist-name">DAVID KOECHNER</h3>
+                            <p class="te-artist-credits">OFFICE / ANCHORMAN / SNL</p>
+                        </div>
+                        <div class="te-schedule-grouped">
+                            <div class="te-grouped-row">
+                                <div class="te-date-col"><span class="d-day">FRI</span><span class="d-num">JAN 09</span>
+                                </div>
+                                <div class="te-times-col"><span class="te-time-pill">8:00PM</span></div>
+                            </div>
+                        </div>
+                        <a href="/events/david-koechner" class="te-main-cta">GET TICKETS</a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="te-card te-animate-in te-animate-delay-1" data-location="dallas">
+                    <div class="te-card-header">
+                        <div class="te-location-badge dallas">
+                            <span class="loc-id">DAL-TX</span>
+                            <span class="loc-name">DALLAS</span>
+                        </div>
+                    </div>
+                    <a href="/events/learnmore-jonasi" class="te-image-container">
+                        <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648724009010"
+                            alt="Learnmore Jonasi">
+                        <div class="te-overlay-scan"></div>
+                    </a>
+                    <div class="te-content">
+                        <div class="te-artist-block">
+                            <h3 class="te-artist-name">LEARNMORE JONASI</h3>
+                            <p class="te-artist-credits">AGT WINNER</p>
+                        </div>
+                        <div class="te-schedule-grouped">
+                            <div class="te-grouped-row">
+                                <div class="te-date-col"><span class="d-day">SAT</span><span class="d-num">JAN 10</span>
+                                </div>
+                                <div class="te-times-col"><span class="te-time-pill">7:00PM</span><span
+                                        class="te-time-pill">9:30PM</span></div>
+                            </div>
+                        </div>
+                        <a href="/events/learnmore-jonasi" class="te-main-cta">GET TICKETS</a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="te-card te-animate-in te-animate-delay-2" data-location="redroom">
+                    <div class="te-card-header">
+                        <div class="te-location-badge red-room">
+                            <span class="loc-id">FW-RR</span>
+                            <span class="loc-name">RED ROOM</span>
+                        </div>
+                    </div>
+                    <a href="/events/nick-rochefort" class="te-image-container">
+                        <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648705637626"
+                            alt="Nick Rochefort">
+                        <div class="te-overlay-scan"></div>
+                    </a>
+                    <div class="te-content">
+                        <div class="te-artist-block">
+                            <h3 class="te-artist-name">NICK ROCHEFORT</h3>
+                            <p class="te-artist-credits">LIVE</p>
+                        </div>
+                        <div class="te-schedule-grouped">
+                            <div class="te-grouped-row">
+                                <div class="te-date-col"><span class="d-day">THU</span><span class="d-num">NOV 20</span>
+                                </div>
+                                <div class="te-times-col"><span class="te-time-pill">7:00PM</span></div>
+                            </div>
+                        </div>
+                        <a href="/events/nick-rochefort" class="te-main-cta">GET TICKETS</a>
+                    </div>
+                </article>
+
+                <!-- Repeat cards for visual fill -->
+                <article class="te-card te-animate-in te-animate-delay-3" data-location="albuquerque">
+                    <div class="te-card-header">
+                        <div class="te-location-badge albuquerque">
+                            <span class="loc-id">ABQ-NM</span>
+                            <span class="loc-name">ALBUQUERQUE</span>
+                        </div>
+                    </div>
+                    <a href="/events/sam-tallent" class="te-image-container">
+                        <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648678028905"
+                            alt="Sam Tallent">
+                        <div class="te-overlay-scan"></div>
+                    </a>
+                    <div class="te-content">
+                        <div class="te-artist-block">
+                            <h3 class="te-artist-name">SAM TALLENT</h3>
+                            <p class="te-artist-credits">WRITER</p>
+                        </div>
+                        <div class="te-schedule-grouped">
+                            <div class="te-grouped-row">
+                                <div class="te-date-col"><span class="d-day">FRI</span><span class="d-num">FEB 20</span>
+                                </div>
+                                <div class="te-times-col"><span class="te-time-pill">7:30PM</span></div>
+                            </div>
+                        </div>
+                        <a href="/events/sam-tallent" class="te-main-cta">GET TICKETS</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- LOAD MORE -->
+            <div class="text-center mt-12 mb-12">
+                <button class="te-btn te-btn-secondary te-btn-lg">LOAD MORE</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="te-footer">
+        <div class="te-container">
+            <div class="te-footer-grid">
+                <div class="te-footer-col">
+                    <h4>HYENAS</h4>
+                    <p
+                        style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--te-gray-light); line-height: 1.6;">
+                        The premier comedy club experience in Texas and New Mexico since 1989.
+                    </p>
+                </div>
+                <div class="te-footer-col">
+                    <h4>LOCATIONS</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="/locations/dallas">Dallas</a></li>
+                        <li><a href="/locations/fortworth">Fort Worth</a></li>
+                        <li><a href="/locations/albuquerque">Albuquerque</a></li>
+                        <li><a href="/locations/redroom">Red Room</a></li>
+                    </ul>
+                </div>
+                <div class="te-footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="/shows">Upcoming Shows</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/private-events">Private Events</a></li>
+                    </ul>
+                </div>
+                <div class="te-footer-col">
+                    <h4>CONNECT</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="https://facebook.com/hyenascomedy">Facebook</a></li>
+                        <li><a href="https://instagram.com/hyenascomedy">Instagram</a></li>
+                        <li><a href="https://twitter.com/hyenascomedy">Twitter</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="te-footer-bottom">
+                <div>© 2026 HYENAS COMEDY NIGHTCLUB. ALL RIGHTS RESERVED.</div>
+                <div>
+                    <a href="/privacy" style="margin-right: var(--space-4);">PRIVACY POLICY</a>
+                    <a href="/terms">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/navigation.js"></script>
+    <script src="../js/filters.js"></script>
+    <script src="../js/animations.js"></script>
+
+</body>
+
+</html>

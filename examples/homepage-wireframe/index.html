@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyenas Comedy Club - Official Homepage</title>
+    <link rel="stylesheet" href="styles.css?v=1.0.0">
+</head>
+
+<body>
+
+    <!-- Section 1: Hero -->
+    <header class="section bg-purple" style="min-height: 500px; display: flex; align-items: center;">
+        <div class="container text-center flex flex-col items-center">
+            <span class="badge badge-yellow animate-bounce" style="margin-bottom: var(--space-4);">NOW SHOWING</span>
+
+            <h1 class="text-4xl" style="margin-bottom: var(--space-4);">
+                Laugh Until It <span class="gradient-text"
+                    style="-webkit-text-fill-color: transparent; -webkit-background-clip: text; background-image: linear-gradient(to right, #fff, var(--accent-neon-pink));">Hurts</span>
+            </h1>
+
+            <p class="text-xl"
+                style="max-width: 600px; margin-bottom: var(--space-6); color: var(--hyenas-purple-pale);">
+                Four legendary venues. Endless laughs. The best comedy in Texas and New Mexico.
+            </p>
+
+            <div class="flex gap-4" style="flex-wrap: wrap; justify-content: center;">
+                <a href="#events" class="btn btn-accent btn-lg">Find Shows</a>
+                <a href="#venues" class="btn btn-secondary btn-lg" style="color: white; border-color: white;">Our
+                    Venues</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 2: Upcoming Events -->
+    <section id="events" class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl">Upcoming Shows</h2>
+                <p class="text-base text-gray">The funniest people on the planet, coming soon</p>
+            </div>
+
+            <div class="grid grid-auto" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                <!-- Show Card 1 -->
+                <article class="show-card">
+                    <div class="show-card__image">
+                        <img src="https://placehold.co/600x400/8B5CF6/white?text=Comedian+1" alt="Comedian">
+                        <span class="show-card__badge">SELLING FAST</span>
+                    </div>
+                    <div class="show-card__content">
+                        <div class="show-card__date">FRI, JAN 10 • 8:00 PM</div>
+                        <h3 class="show-card__title">Ralph Barbosa</h3>
+                        <div class="show-card__venue">📍 Hyenas Dallas</div>
+                        <div class="show-card__footer">
+                            <span class="show-card__price">$35</span>
+                            <a href="#" class="btn btn-primary btn-sm">Get Tickets</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Show Card 2 -->
+                <article class="show-card">
+                    <div class="show-card__image">
+                        <img src="https://placehold.co/600x400/EC4899/white?text=Comedian+2" alt="Comedian">
+                    </div>
+                    <div class="show-card__content">
+                        <div class="show-card__date">SAT, JAN 11 • 7:00 PM</div>
+                        <h3 class="show-card__title">Shane Gillis</h3>
+                        <div class="show-card__venue">📍 Hyenas Fort Worth</div>
+                        <div class="show-card__footer">
+                            <span class="show-card__price">$45</span>
+                            <a href="#" class="btn btn-primary btn-sm">Get Tickets</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Show Card 3 -->
+                <article class="show-card">
+                    <div class="show-card__image">
+                        <img src="https://placehold.co/600x400/FBBF24/black?text=Comedian+3" alt="Comedian">
+                    </div>
+                    <div class="show-card__content">
+                        <div class="show-card__date">FRI, JAN 17 • 9:30 PM</div>
+                        <h3 class="show-card__title">Open Mic Night</h3>
+                        <div class="show-card__venue">📍 Hyenas Albuquerque</div>
+                        <div class="show-card__footer">
+                            <span class="show-card__price">$10</span>
+                            <a href="#" class="btn btn-primary btn-sm">Get Tickets</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Show Card 4 -->
+                <article class="show-card">
+                    <div class="show-card__image">
+                        <img src="https://placehold.co/600x400/06B6D4/white?text=Comedian+4" alt="Comedian">
+                        <span class="show-card__badge">SOLD OUT</span>
+                    </div>
+                    <div class="show-card__content">
+                        <div class="show-card__date">SAT, JAN 18 • 8:00 PM</div>
+                        <h3 class="show-card__title">Mark Normand</h3>
+                        <div class="show-card__venue">📍 Hyenas Dallas</div>
+                        <div class="show-card__footer">
+                            <span class="show-card__price">$30</span>
+                            <button class="btn btn-primary btn-sm" disabled
+                                style="opacity: 0.5; cursor: not-allowed;">Sold Out</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-secondary btn-lg">View All Shows</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Featured by Location -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl">Featured by Venue</h2>
+            </div>
+
+            <!-- Dallas Group -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl flex items-center gap-2">
+                        <span
+                            style="display:inline-block; width: 12px; height: 12px; border-radius: 50%; background: var(--hyenas-purple);"></span>
+                        Hyenas Dallas
+                    </h3>
+                    <a href="#" class="text-purple font-bold">See All Dallas →</a>
+                </div>
+                <div class="grid grid-2">
+                    <!-- Card D1 -->
+                    <article class="show-card">
+                        <div class="show-card__content">
+                            <div class="show-card__date">FRI, FEB 14</div>
+                            <h3 class="show-card__title">Valentine's Special</h3>
+                            <div class="show-card__footer">
+                                <span class="show-card__price">$50/couple</span>
+                                <a href="#" class="btn btn-primary btn-sm">Buy</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card D2 -->
+                    <article class="show-card">
+                        <div class="show-card__content">
+                            <div class="show-card__date">SAT, FEB 15</div>
+                            <h3 class="show-card__title">Comedy Roast Battle</h3>
+                            <div class="show-card__footer">
+                                <span class="show-card__price">$20</span>
+                                <a href="#" class="btn btn-primary btn-sm">Buy</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Fort Worth Group -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl flex items-center gap-2">
+                        <span
+                            style="display:inline-block; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-electric);"></span>
+                        Hyenas Fort Worth
+                    </h3>
+                    <a href="#" class="text-purple font-bold">See All Fort Worth →</a>
+                </div>
+                <div class="grid grid-2">
+                    <!-- Card FW1 -->
+                    <article class="show-card">
+                        <div class="show-card__content">
+                            <div class="show-card__date">THU, JAN 23</div>
+                            <h3 class="show-card__title">Thursday Night Live</h3>
+                            <div class="show-card__footer">
+                                <span class="show-card__price">$15</span>
+                                <a href="#" class="btn btn-primary btn-sm">Buy</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 4: Location Directory -->
+    <section id="venues" class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl">Our Venues</h2>
+                <p class="text-base text-gray">Four iconic locations across Texas and New Mexico</p>
+            </div>
+
+            <div class="grid grid-2" style="gap: var(--space-8);">
+                <!-- Venue 1: Dallas -->
+                <div class="brutal-border"
+                    style="background: white; padding: var(--space-6); border-radius: var(--radius-lg);">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div
+                            style="width: 80px; height: 80px; background: var(--hyenas-purple); border-radius: var(--radius-md);">
+                        </div>
+                        <div>
+                            <h3 class="text-xl mb-2">Hyenas Dallas</h3>
+                            <p class="text-sm text-gray mb-0">The flagship venue in Dallas</p>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-sm text-gray">Located in Mockingbird Station. Full bar and kitchen available.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="btn btn-primary btn-sm">Explore Venue</a>
+                        <a href="#" class="btn btn-ghost btn-sm">See Shows</a>
+                    </div>
+                </div>
+
+                <!-- Venue 2: Fort Worth -->
+                <div class="brutal-border"
+                    style="background: white; padding: var(--space-6); border-radius: var(--radius-lg);">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div
+                            style="width: 80px; height: 80px; background: var(--accent-electric); border-radius: var(--radius-md);">
+                        </div>
+                        <div>
+                            <h3 class="text-xl mb-2">Hyenas Fort Worth</h3>
+                            <p class="text-sm text-gray mb-0">Comedy in Cowtown</p>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-sm text-gray">Historic downtown Fort Worth location. The original Hyenas
+                        experience.</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="btn btn-primary btn-sm">Explore Venue</a>
+                        <a href="#" class="btn btn-ghost btn-sm">See Shows</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Trust & Social Proof -->
+    <section class="section bg-light-purple">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl">Why Hyenas?</h2>
+            </div>
+
+            <div class="grid grid-3 text-center mb-8">
+                <div>
+                    <div class="text-4xl font-bold text-purple mb-2">4.8/5</div>
+                    <div class="text-sm text-gray">Google Reviews</div>
+                    <div class="text-xs text-gray">(1,200+ reviews)</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-purple mb-2">15+</div>
+                    <div class="text-lg text-gray">Years</div>
+                    <div class="text-sm text-gray">of live comedy history</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-purple mb-2">5,000+</div>
+                    <div class="text-lg text-gray">Shows</div>
+                    <div class="text-sm text-gray">produced and hosted</div>
+                </div>
+            </div>
+
+            <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+                <p class="text-xl text-gray font-bold italic">"Best comedy club in Dallas! Great atmosphere, cold
+                    drinks, and absolutely hilarious comics every single week."</p>
+                <p class="text-base text-purple mt-4">— John D., Google Review</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Email Signup -->
+    <section class="section bg-black">
+        <div class="container container-sm text-center">
+            <h2 class="text-2xl" style="color: white;">Never Miss a Show</h2>
+            <p class="text-base" style="color: var(--gray-400); margin-bottom: var(--space-6);">
+                Get presale access and show alerts delivered to your inbox.
+            </p>
+
+            <form class="flex gap-3 flex-col" style="margin-bottom: var(--space-4);">
+                <input type="email" placeholder="Enter your email"
+                    style="padding: var(--space-4); border-radius: var(--radius-md); border: 2px solid var(--gray-700); width: 100%; font-size: 1rem;">
+                <button type="submit" class="btn btn-accent btn-block">Subscribe</button>
+            </form>
+
+            <p class="text-xs" style="color: var(--gray-700);">We respect your inbox. Unsubscribe anytime.</p>
+        </div>
+    </section>
+
+    <!-- Section 7: Content Hub -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl">From the Blog</h2>
+                <p class="text-base text-gray">Stories, spotlights, and behind the scenes</p>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Blog Card 1 -->
+                <article class="blog-card">
+                    <div class="blog-card__image">
+                        <img src="https://placehold.co/600x340/ddd/333?text=Article+1" alt="Article">
+                    </div>
+                    <div class="blog-card__content">
+                        <span class="badge badge-purple">Spotlight</span>
+                        <h3 class="text-lg font-bold mt-4 mb-2">Getting Started in Standup</h3>
+                        <p class="text-sm text-gray mb-4">Tips from the pros on how to write your first tight five.</p>
+                        <a href="#" class="text-purple font-bold">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="blog-card">
+                    <div class="blog-card__image">
+                        <img src="https://placehold.co/600x340/ddd/333?text=Article+2" alt="Article">
+                    </div>
+                    <div class="blog-card__content">
+                        <span class="badge badge-cyan">News</span>
+                        <h3 class="text-lg font-bold mt-4 mb-2">New Menu Items Arrive</h3>
+                        <p class="text-sm text-gray mb-4">Check out the new craft cocktails and bites at Dallas
+                            location.</p>
+                        <a href="#" class="text-purple font-bold">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="blog-card">
+                    <div class="blog-card__image">
+                        <img src="https://placehold.co/600x340/ddd/333?text=Article+3" alt="Article">
+                    </div>
+                    <div class="blog-card__content">
+                        <span class="badge badge-outline" style="border: 1px solid var(--gray-400);">History</span>
+                        <h3 class="text-lg font-bold mt-4 mb-2">The Legend of Hyenas</h3>
+                        <p class="text-sm text-gray mb-4">How we started from a small room to a Texas comedy empire.</p>
+                        <a href="#" class="text-purple font-bold">Read More →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-secondary">View All Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Footer -->
+    <footer class="section bg-black" style="padding-bottom: var(--space-6);">
+        <div class="container">
+            <div class="grid grid-4" style="margin-bottom: var(--space-8);">
+                <div>
+                    <h4 style="color: white; margin-bottom: var(--space-4);">Venues</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li class="mb-2"><a href="#" style="color: var(--gray-400);">Dallas</a></li>
+                        <li class="mb-2"><a href="#" style="color: var(--gray-400);">Fort Worth</a></li>
+                        <li class="mb-2"><a href="#" style="color: var(--gray-400);">Albuquerque</a></li>
+                        <li class="mb-2"><a href="#" style="color: var(--gray-400);">Red Room</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: var(--space-4);">Shows</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li class="mb-2"><a href="#" style="color: var(--gray-400);">All Shows</a></li>
+                        <li class="mb-2"><a href="#" style="color: var(--gray-400);">Upcoming</a></li>
+                        <li class="mb-2"><a href="#" style="color: var(--gray-400);">Calendar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: var(--space-4);">Info</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li class="mb-2"><a href="#" style="color: var(--gray-400);">About Us</a></li>
+                        <li class="mb-2"><a href="#" style="color: var(--gray-400);">Contact</a></li>
+                        <li class="mb-2"><a href="#" style="color: var(--gray-400);">Group Events</a></li>
+                        <li class="mb-2"><a href="#" style="color: var(--gray-400);">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: var(--space-4);">Follow Us</h4>
+                    <div class="flex gap-2">
+                        <a href="#" style="color: var(--gray-400);">Facebook</a>
+                        <a href="#" style="color: var(--gray-400);">Instagram</a>
+                        <a href="#" style="color: var(--gray-400);">Twitter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                style="border-top: 1px solid var(--gray-900); padding-top: var(--space-6); text-align: center; color: var(--gray-700); font-size: 0.8rem;">
+                <p>&copy; 2026 Hyenas Comedy Club. All rights reserved.</p>
+                <p>Privacy Policy • Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<!-- 
+  Note: This is a static HTML example for the Hyenas Design System 1.0.0. 
+  It uses the CSS defined in styles.css and placeholders for images.
+-->
+
+</html>

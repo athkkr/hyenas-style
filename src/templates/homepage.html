@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyenas Comedy Nightclub | Dallas & Fort Worth</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="The premier comedy club experience in Texas. Live stand-up comedy in Dallas, Fort Worth, and Albuquerque.">
+    <meta name="keywords" content="comedy club, stand-up comedy, dallas comedy, fort worth comedy, hyenas comedy">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Roboto+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/hyenas-te-system.css">
+
+    <!-- Inline styles for demo only (should be in CSS) -->
+    <style>
+        /* Specific overrides for homepage hero to match wireframe exactly */
+        .te-hero .te-hero-content {
+            max-width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="te-nav">
+        <div class="te-container">
+            <div class="te-nav-inner">
+                <a href="/" class="te-logo">
+                    <img src="https://cdn.prod.website-files.com/626314d81c6e619157def12e/62634a8994907cbc6e923aa0_new-logo.png"
+                        alt="Hyenas Comedy Nightclub">
+                </a>
+
+                <button class="te-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="te-nav-menu">
+                    <li><a href="/locations/fortworth" class="te-nav-link">FORT WORTH</a></li>
+                    <li><a href="/locations/dallas" class="te-nav-link">DALLAS</a></li>
+                    <li><a href="/locations/redroom" class="te-nav-link">RED ROOM</a></li>
+                    <li><a href="/locations/albuquerque" class="te-nav-link">ABQ</a></li>
+                    <li><a href="/shows" class="te-nav-link">SHOWS & TICKETS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="te-hero">
+        <div class="te-hero-bg">
+            <!-- Rotating hero background - changes on page refresh -->
+            <div id="hero-bg-image"
+                style="position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.4;">
+            </div>
+            <div
+                style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9));">
+            </div>
+        </div>
+        <div class="te-container">
+            <div class="te-hero-content">
+                <span class="te-badge te-badge-primary mb-4">LIVE COMEDY TONIGHT</span>
+                <h1 class="text-5xl font-black uppercase leading-none tracking-tighter text-shadow-brutal mb-6">
+                    TEXAS' ORIGINAL<br>COMEDY CLUB</h1>
+                <p class="text-xl text-gray-light mb-8 font-mono">
+                    Bringing the best touring comedians to Dallas, Fort Worth, and Albuquerque since 1989.
+                </p>
+                <div class="te-hero-actions">
+                    <a href="#shows" class="te-btn te-btn-primary te-btn-lg">GET TICKETS</a>
+                    <a href="/locations" class="te-btn te-btn-outline te-btn-lg">FIND LOCATION</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPCOMING SHOWS SECTION -->
+    <section class="te-section" id="shows">
+        <div class="te-container">
+
+            <div class="te-section-header">
+                <h2 class="te-section-title">UPCOMING_SHOWS</h2>
+                <div class="te-section-meta">
+                    <a href="/shows" class="te-link-arrow">VIEW ALL SHOWS</a>
+                </div>
+            </div>
+
+            <!-- Interactive Slider -->
+            <div class="te-slider-wrapper te-slider">
+                <div class="te-slider-container" id="shows-slider">
+
+                    <!-- Card 1: Fort Worth - Stacked Dual-Event Card (Main + Red Room) -->
+                    <article class="te-card te-card-stacked" data-location="fortworth" data-venues="main,redroom">
+                        <!-- Location Badge Header -->
+                        <div class="te-card-header">
+                            <div class="te-location-badge fort-worth">
+                                <span class="loc-id">FW-TX</span>
+                                <span class="loc-name">FORT WORTH</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <!-- Stacked Events Container -->
+                        <div class="te-card-stacked-container">
+
+                            <!-- Main Event (70%) - Main Venue -->
+                            <div class="te-stacked-main">
+                                <a href="/events/david-koechner" class="te-image-container">
+                                    <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2853111880148553046"
+                                        alt="David Koechner">
+                                    <div class="te-overlay-scan"></div>
+                                </a>
+
+                                <div class="te-content">
+                                    <div class="te-artist-block">
+                                        <h3 class="te-artist-name">DAVID KOECHNER</h3>
+                                        <p class="te-artist-credits">OFFICE / ANCHORMAN / SNL</p>
+                                    </div>
+
+                                    <div class="te-schedule-grouped">
+                                        <div class="te-grouped-row">
+                                            <div class="te-date-col">
+                                                <span class="d-day">FRI</span>
+                                                <span class="d-num">JAN 09</span>
+                                            </div>
+                                            <div class="te-times-col">
+                                                <span class="te-time-pill">8:00PM</span>
+                                                <span class="te-time-pill">10:00PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="te-grouped-row">
+                                            <div class="te-date-col">
+                                                <span class="d-day">SAT</span>
+                                                <span class="d-num">JAN 10</span>
+                                            </div>
+                                            <div class="te-times-col">
+                                                <span class="te-time-pill">7:00PM</span>
+                                                <span class="te-time-pill">9:30PM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Secondary Event (30%) - Red Room -->
+                            <div class="te-stacked-secondary te-stacked-redroom">
+                                <a href="/events/nick-rochefort" class="te-stacked-secondary-link">
+                                    <div class="te-image-container">
+                                        <span class="te-stacked-secondary-label te-label-redroom">RED ROOM</span>
+                                        <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648724009010"
+                                            alt="Nick Rochefort">
+                                        <div class="te-overlay-scan"></div>
+                                    </div>
+                                    <div class="te-content">
+                                        <div class="te-artist-block">
+                                            <h3 class="te-artist-name">NICK ROCHEFORT</h3>
+                                            <p class="te-artist-credits">MDE / WORLD PEACE</p>
+                                        </div>
+                                        <div class="te-schedule-compact">
+                                            <span class="date">THU JAN 08</span>
+                                            <span class="time">7PM & 9PM</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="/locations/fortworth" class="te-main-cta">VIEW ALL FORT WORTH SHOWS</a>
+                    </article>
+
+                    <!-- Card 2: Dallas - Stacked Dual-Event Card -->
+                    <article class="te-card te-card-stacked" data-location="dallas">
+                        <div class="te-card-header">
+                            <div class="te-location-badge dallas">
+                                <span class="loc-id">DAL-TX</span>
+                                <span class="loc-name">DALLAS</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <!-- Stacked Events Container -->
+                        <div class="te-card-stacked-container">
+
+                            <!-- Main Event (70%) -->
+                            <div class="te-stacked-main">
+                                <a href="/events/learnmore-jonasi" class="te-image-container">
+                                    <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648724009010"
+                                        alt="Learnmore Jonasi">
+                                    <div class="te-overlay-scan"></div>
+                                </a>
+
+                                <div class="te-content">
+                                    <div class="te-artist-block">
+                                        <h3 class="te-artist-name">LEARNMORE JONASI</h3>
+                                        <p class="te-artist-credits">AGT WINNER / COMEDY CENTRAL</p>
+                                    </div>
+
+                                    <div class="te-schedule-grouped">
+                                        <div class="te-grouped-row">
+                                            <div class="te-date-col">
+                                                <span class="d-day">FRI</span>
+                                                <span class="d-num">JAN 09</span>
+                                            </div>
+                                            <div class="te-times-col">
+                                                <span class="te-time-pill">8:00PM</span>
+                                                <span class="te-time-pill">10:00PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="te-grouped-row">
+                                            <div class="te-date-col">
+                                                <span class="d-day">SAT</span>
+                                                <span class="d-num">JAN 10</span>
+                                            </div>
+                                            <div class="te-times-col">
+                                                <span class="te-time-pill">7:00PM</span>
+                                                <span class="te-time-pill">9:30PM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Secondary Event (30%) -->
+                            <div class="te-stacked-secondary">
+                                <a href="/events/dallas-comedian-2" class="te-stacked-secondary-link">
+                                    <div class="te-image-container">
+                                        <span class="te-stacked-secondary-label">NEXT WEEK</span>
+                                        <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2853111880148553046"
+                                            alt="Next Week Headliner">
+                                        <div class="te-overlay-scan"></div>
+                                    </div>
+                                    <div class="te-content">
+                                        <div class="te-artist-block">
+                                            <h3 class="te-artist-name">NEXT WEEK HEADLINER</h3>
+                                            <p class="te-artist-credits">COMEDY CENTRAL / HBO</p>
+                                        </div>
+                                        <div class="te-schedule-compact">
+                                            <span class="date">FRI JAN 16</span>
+                                            <span class="time">8PM & 10PM</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="/locations/dallas" class="te-main-cta">VIEW ALL DALLAS SHOWS</a>
+                    </article>
+
+                    <!-- Card 3: Albuquerque - Stacked Dual-Event Card -->
+                    <article class="te-card te-card-stacked" data-location="albuquerque">
+                        <div class="te-card-header">
+                            <div class="te-location-badge albuquerque">
+                                <span class="loc-id">ABQ-NM</span>
+                                <span class="loc-name">ALBUQUERQUE</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <!-- Stacked Events Container -->
+                        <div class="te-card-stacked-container">
+
+                            <!-- Main Event (70%) -->
+                            <div class="te-stacked-main">
+                                <a href="/events/sam-tallent" class="te-image-container">
+                                    <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648678028905"
+                                        alt="Sam Tallent">
+                                    <div class="te-overlay-scan"></div>
+                                </a>
+
+                                <div class="te-content">
+                                    <div class="te-artist-block">
+                                        <h3 class="te-artist-name">SAM TALLENT</h3>
+                                        <p class="te-artist-credits">COMEDIAN / WRITER</p>
+                                    </div>
+
+                                    <div class="te-schedule-grouped">
+                                        <div class="te-grouped-row">
+                                            <div class="te-date-col">
+                                                <span class="d-day">FRI</span>
+                                                <span class="d-num">FEB 20</span>
+                                            </div>
+                                            <div class="te-times-col">
+                                                <span class="te-time-pill">7:30PM</span>
+                                                <span class="te-time-pill">9:30PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="te-grouped-row">
+                                            <div class="te-date-col">
+                                                <span class="d-day">SAT</span>
+                                                <span class="d-num">FEB 21</span>
+                                            </div>
+                                            <div class="te-times-col">
+                                                <span class="te-time-pill">7:00PM</span>
+                                                <span class="te-time-pill">9:30PM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Secondary Event (30%) -->
+                            <div class="te-stacked-secondary">
+                                <a href="/events/abq-next-week" class="te-stacked-secondary-link">
+                                    <div class="te-image-container">
+                                        <span class="te-stacked-secondary-label">NEXT WEEK</span>
+                                        <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648678028905"
+                                            alt="Next Week Comedian">
+                                        <div class="te-overlay-scan"></div>
+                                    </div>
+                                    <div class="te-content">
+                                        <div class="te-artist-block">
+                                            <h3 class="te-artist-name">NEXT WEEK COMEDIAN</h3>
+                                            <p class="te-artist-credits">COMEDY CENTRAL / NETFLIX</p>
+                                        </div>
+                                        <div class="te-schedule-compact">
+                                            <span class="date">FRI FEB 27</span>
+                                            <span class="time">7:30PM & 9:30PM</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="/locations/albuquerque" class="te-main-cta">VIEW ALL ABQ SHOWS</a>
+                    </article>
+
+                    <!-- Card 4: Fort Worth - Stacked Dual-Event Card -->
+                    <article class="te-card te-card-stacked" data-location="fortworth">
+                        <div class="te-card-header">
+                            <div class="te-location-badge fort-worth">
+                                <span class="loc-id">FW-TX</span>
+                                <span class="loc-name">FORT WORTH</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <!-- Stacked Events Container -->
+                        <div class="te-card-stacked-container">
+
+                            <!-- Main Event (70%) -->
+                            <div class="te-stacked-main">
+                                <a href="/events/comedian-4" class="te-image-container">
+                                    <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2853111880148553046"
+                                        alt="Upcoming Comedian">
+                                    <div class="te-overlay-scan"></div>
+                                </a>
+
+                                <div class="te-content">
+                                    <div class="te-artist-block">
+                                        <h3 class="te-artist-name">COMEDIAN NAME</h3>
+                                        <p class="te-artist-credits">CREDITS / SHOWS</p>
+                                    </div>
+
+                                    <div class="te-schedule-grouped">
+                                        <div class="te-grouped-row">
+                                            <div class="te-date-col">
+                                                <span class="d-day">FRI</span>
+                                                <span class="d-num">MAR 15</span>
+                                            </div>
+                                            <div class="te-times-col">
+                                                <span class="te-time-pill">8:00PM</span>
+                                                <span class="te-time-pill">10:00PM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Secondary Event (30%) -->
+                            <div class="te-stacked-secondary">
+                                <a href="/events/comedian-4b" class="te-stacked-secondary-link">
+                                    <div class="te-image-container">
+                                        <span class="te-stacked-secondary-label">COMING SOON</span>
+                                        <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648724009010"
+                                            alt="Coming Soon">
+                                        <div class="te-overlay-scan"></div>
+                                    </div>
+                                    <div class="te-content">
+                                        <div class="te-artist-block">
+                                            <h3 class="te-artist-name">ANOTHER COMEDIAN</h3>
+                                            <p class="te-artist-credits">NETFLIX / SPECIAL</p>
+                                        </div>
+                                        <div class="te-schedule-compact">
+                                            <span class="date">SAT MAR 16</span>
+                                            <span class="time">7PM & 9:30PM</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="/locations/fortworth" class="te-main-cta">VIEW ALL FORT WORTH SHOWS</a>
+                    </article>
+
+                    <!-- Card 5: Dallas - Stacked Dual-Event Card -->
+                    <article class="te-card te-card-stacked" data-location="dallas">
+                        <div class="te-card-header">
+                            <div class="te-location-badge dallas">
+                                <span class="loc-id">DAL-TX</span>
+                                <span class="loc-name">DALLAS</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <!-- Stacked Events Container -->
+                        <div class="te-card-stacked-container">
+
+                            <!-- Main Event (70%) -->
+                            <div class="te-stacked-main">
+                                <a href="/events/comedian-5" class="te-image-container">
+                                    <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648724009010"
+                                        alt="Upcoming Comedian">
+                                    <div class="te-overlay-scan"></div>
+                                </a>
+
+                                <div class="te-content">
+                                    <div class="te-artist-block">
+                                        <h3 class="te-artist-name">COMEDIAN NAME</h3>
+                                        <p class="te-artist-credits">CREDITS / SHOWS</p>
+                                    </div>
+
+                                    <div class="te-schedule-grouped">
+                                        <div class="te-grouped-row">
+                                            <div class="te-date-col">
+                                                <span class="d-day">SAT</span>
+                                                <span class="d-num">MAR 22</span>
+                                            </div>
+                                            <div class="te-times-col">
+                                                <span class="te-time-pill">7:30PM</span>
+                                                <span class="te-time-pill">9:30PM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Secondary Event (30%) -->
+                            <div class="te-stacked-secondary">
+                                <a href="/events/comedian-5b" class="te-stacked-secondary-link">
+                                    <div class="te-image-container">
+                                        <span class="te-stacked-secondary-label">NEXT WEEK</span>
+                                        <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2853111880148553046"
+                                            alt="Next Week">
+                                        <div class="te-overlay-scan"></div>
+                                    </div>
+                                    <div class="te-content">
+                                        <div class="te-artist-block">
+                                            <h3 class="te-artist-name">UPCOMING COMIC</h3>
+                                            <p class="te-artist-credits">HBO / SPECIAL</p>
+                                        </div>
+                                        <div class="te-schedule-compact">
+                                            <span class="date">FRI MAR 28</span>
+                                            <span class="time">8PM & 10PM</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="/locations/dallas" class="te-main-cta">VIEW ALL DALLAS SHOWS</a>
+                    </article>
+
+                    <!-- Card 6: Albuquerque - Stacked Dual-Event Card -->
+                    <article class="te-card te-card-stacked" data-location="albuquerque">
+                        <div class="te-card-header">
+                            <div class="te-location-badge albuquerque">
+                                <span class="loc-id">ABQ-NM</span>
+                                <span class="loc-name">ALBUQUERQUE</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <!-- Stacked Events Container -->
+                        <div class="te-card-stacked-container">
+
+                            <!-- Main Event (70%) -->
+                            <div class="te-stacked-main">
+                                <a href="/events/comedian-6" class="te-image-container">
+                                    <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648678028905"
+                                        alt="Upcoming Comedian">
+                                    <div class="te-overlay-scan"></div>
+                                </a>
+
+                                <div class="te-content">
+                                    <div class="te-artist-block">
+                                        <h3 class="te-artist-name">COMEDIAN NAME</h3>
+                                        <p class="te-artist-credits">CREDITS / SHOWS</p>
+                                    </div>
+
+                                    <div class="te-schedule-grouped">
+                                        <div class="te-grouped-row">
+                                            <div class="te-date-col">
+                                                <span class="d-day">FRI</span>
+                                                <span class="d-num">APR 05</span>
+                                            </div>
+                                            <div class="te-times-col">
+                                                <span class="te-time-pill">8:00PM</span>
+                                                <span class="te-time-pill">10:00PM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Secondary Event (30%) -->
+                            <div class="te-stacked-secondary">
+                                <a href="/events/comedian-6b" class="te-stacked-secondary-link">
+                                    <div class="te-image-container">
+                                        <span class="te-stacked-secondary-label">ALSO PLAYING</span>
+                                        <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648678028905"
+                                            alt="Also Playing">
+                                        <div class="te-overlay-scan"></div>
+                                    </div>
+                                    <div class="te-content">
+                                        <div class="te-artist-block">
+                                            <h3 class="te-artist-name">LOCAL FAVORITE</h3>
+                                            <p class="te-artist-credits">ABQ NATIVE</p>
+                                        </div>
+                                        <div class="te-schedule-compact">
+                                            <span class="date">SAT APR 06</span>
+                                            <span class="time">7PM & 9:30PM</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="/locations/albuquerque" class="te-main-cta">VIEW ALL ABQ SHOWS</a>
+                    </article>
+
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="te-slider-nav">
+                    <button class="te-slider-btn te-slider-prev" id="slider-prev" aria-label="Previous slide">←</button>
+                    <button class="te-slider-btn te-slider-next" id="slider-next" aria-label="Next slide">→</button>
+                </div>
+
+                <!-- Mobile Dots (Injected by JS) -->
+                <div class="te-slider-dots" id="slider-dots"></div>
+
+                <!-- Navigation Hint -->
+                <div class="te-slider-hint">
+                    Swipe to view
+                </div>
+            </div>
+
+            <!-- Load More (Hidden on homepage but usually present on lists, kept for consistent spacing if needed, or remove) -->
+            <div class="text-center mt-8">
+                <a href="/shows" class="te-btn te-btn-primary te-btn-lg">VIEW FULL SCHEDULE</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FORT WORTH - MAIN ROOM SLIDER -->
+    <section class="te-section te-location-slider" id="fortworth-main-slider" style="background: var(--te-off-white);">
+        <div class="te-container">
+
+            <div class="te-section-header">
+                <h2 class="te-section-title">FORT_WORTH_-_MAIN_ROOM</h2>
+                <div class="te-section-meta">
+                    <div class="te-location-badge fort-worth">
+                        <span class="loc-id">FW-TX</span>
+                        <span class="loc-name">MAIN ROOM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fort Worth Slider -->
+            <div class="te-slider-wrapper te-slider">
+                <div class="te-slider-container" id="fortworth-shows-slider">
+
+                    <!-- Fort Worth Card 1 -->
+                    <article class="te-card" data-location="fortworth">
+                        <div class="te-card-header">
+                            <div class="te-location-badge fort-worth">
+                                <span class="loc-id">FW-TX</span>
+                                <span class="loc-name">FORT WORTH</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <a href="/events/david-koechner" class="te-image-container">
+                            <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2853111880148553046"
+                                alt="David Koechner">
+                            <div class="te-overlay-scan"></div>
+                        </a>
+
+                        <div class="te-content">
+                            <div class="te-artist-block">
+                                <h3 class="te-artist-name">DAVID KOECHNER</h3>
+                                <p class="te-artist-credits">OFFICE / ANCHORMAN / SNL</p>
+                            </div>
+
+                            <div class="te-schedule-grouped">
+                                <div class="te-grouped-row">
+                                    <div class="te-date-col">
+                                        <span class="d-day">FRI</span>
+                                        <span class="d-num">JAN 09</span>
+                                    </div>
+                                    <div class="te-times-col">
+                                        <span class="te-time-pill">8:00PM</span>
+                                        <span class="te-time-pill">10:00PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/events/david-koechner" class="te-main-cta">GET TICKETS</a>
+                        </div>
+                    </article>
+
+                    <!-- Fort Worth Card 2 -->
+                    <article class="te-card" data-location="fortworth">
+                        <div class="te-card-header">
+                            <div class="te-location-badge fort-worth">
+                                <span class="loc-id">FW-TX</span>
+                                <span class="loc-name">FORT WORTH</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <a href="/events/comedian-fw-2" class="te-image-container">
+                            <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648724009010"
+                                alt="Fort Worth Comedian">
+                            <div class="te-overlay-scan"></div>
+                        </a>
+
+                        <div class="te-content">
+                            <div class="te-artist-block">
+                                <h3 class="te-artist-name">UPCOMING COMEDIAN</h3>
+                                <p class="te-artist-credits">COMEDY CENTRAL / NETFLIX</p>
+                            </div>
+
+                            <div class="te-schedule-grouped">
+                                <div class="te-grouped-row">
+                                    <div class="te-date-col">
+                                        <span class="d-day">SAT</span>
+                                        <span class="d-num">JAN 17</span>
+                                    </div>
+                                    <div class="te-times-col">
+                                        <span class="te-time-pill">7:00PM</span>
+                                        <span class="te-time-pill">9:30PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/events/comedian-fw-2" class="te-main-cta">GET TICKETS</a>
+                        </div>
+                    </article>
+
+                    <!-- Fort Worth Card 3 -->
+                    <article class="te-card" data-location="fortworth">
+                        <div class="te-card-header">
+                            <div class="te-location-badge fort-worth">
+                                <span class="loc-id">FW-TX</span>
+                                <span class="loc-name">FORT WORTH</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <a href="/events/comedian-fw-3" class="te-image-container">
+                            <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648678028905"
+                                alt="Fort Worth Comedian">
+                            <div class="te-overlay-scan"></div>
+                        </a>
+
+                        <div class="te-content">
+                            <div class="te-artist-block">
+                                <h3 class="te-artist-name">HEADLINER NAME</h3>
+                                <p class="te-artist-credits">HBO / SPECIAL</p>
+                            </div>
+
+                            <div class="te-schedule-grouped">
+                                <div class="te-grouped-row">
+                                    <div class="te-date-col">
+                                        <span class="d-day">FRI</span>
+                                        <span class="d-num">JAN 24</span>
+                                    </div>
+                                    <div class="te-times-col">
+                                        <span class="te-time-pill">8:00PM</span>
+                                        <span class="te-time-pill">10:00PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/events/comedian-fw-3" class="te-main-cta">GET TICKETS</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="te-slider-nav">
+                    <button class="te-slider-btn te-slider-prev" aria-label="Previous slide">←</button>
+                    <button class="te-slider-btn te-slider-next" aria-label="Next slide">→</button>
+                </div>
+
+                <!-- Mobile Dots -->
+                <div class="te-slider-dots"></div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="/locations/fortworth" class="te-btn te-btn-primary te-btn-lg">VIEW ALL FORT WORTH SHOWS</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FORT WORTH - RED ROOM SLIDER -->
+    <section class="te-section te-location-slider" id="fortworth-redroom-slider" style="background: var(--te-white);">
+        <div class="te-container">
+
+            <div class="te-section-header">
+                <h2 class="te-section-title">FORT_WORTH_-_RED_ROOM</h2>
+                <div class="te-section-meta">
+                    <div class="te-location-badge red-room">
+                        <span class="loc-id">FW-RR</span>
+                        <span class="loc-name">RED ROOM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fort Worth Red Room Slider -->
+            <div class="te-slider-wrapper te-slider">
+                <div class="te-slider-container" id="fortworth-redroom-shows-slider">
+
+                    <!-- Red Room Card 1 -->
+                    <article class="te-card" data-location="redroom">
+                        <div class="te-card-header">
+                            <div class="te-location-badge red-room">
+                                <span class="loc-id">FW-RR</span>
+                                <span class="loc-name">RED ROOM</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <a href="/events/nick-rochefort" class="te-image-container">
+                            <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648724009010"
+                                alt="Nick Rochefort">
+                            <div class="te-overlay-scan"></div>
+                        </a>
+
+                        <div class="te-content">
+                            <div class="te-artist-block">
+                                <h3 class="te-artist-name">NICK ROCHEFORT</h3>
+                                <p class="te-artist-credits">MDE / WORLD PEACE</p>
+                            </div>
+
+                            <div class="te-schedule-grouped">
+                                <div class="te-grouped-row">
+                                    <div class="te-date-col">
+                                        <span class="d-day">THU</span>
+                                        <span class="d-num">JAN 08</span>
+                                    </div>
+                                    <div class="te-times-col">
+                                        <span class="te-time-pill">7:00PM</span>
+                                        <span class="te-time-pill">9:00PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/events/nick-rochefort" class="te-main-cta">GET TICKETS</a>
+                        </div>
+                    </article>
+
+                    <!-- Red Room Card 2 -->
+                    <article class="te-card" data-location="redroom">
+                        <div class="te-card-header">
+                            <div class="te-location-badge red-room">
+                                <span class="loc-id">FW-RR</span>
+                                <span class="loc-name">RED ROOM</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <a href="/events/comedian-rr-2" class="te-image-container">
+                            <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2853111880148553046"
+                                alt="Red Room Comedian">
+                            <div class="te-overlay-scan"></div>
+                        </a>
+
+                        <div class="te-content">
+                            <div class="te-artist-block">
+                                <h3 class="te-artist-name">UPCOMING COMIC</h3>
+                                <p class="te-artist-credits">COMEDY CENTRAL / NETFLIX</p>
+                            </div>
+
+                            <div class="te-schedule-grouped">
+                                <div class="te-grouped-row">
+                                    <div class="te-date-col">
+                                        <span class="d-day">FRI</span>
+                                        <span class="d-num">JAN 16</span>
+                                    </div>
+                                    <div class="te-times-col">
+                                        <span class="te-time-pill">8:00PM</span>
+                                        <span class="te-time-pill">10:00PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/events/comedian-rr-2" class="te-main-cta">GET TICKETS</a>
+                        </div>
+                    </article>
+
+                    <!-- Red Room Card 3 -->
+                    <article class="te-card" data-location="redroom">
+                        <div class="te-card-header">
+                            <div class="te-location-badge red-room">
+                                <span class="loc-id">FW-RR</span>
+                                <span class="loc-name">RED ROOM</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <a href="/events/comedian-rr-3" class="te-image-container">
+                            <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648678028905"
+                                alt="Red Room Comedian">
+                            <div class="te-overlay-scan"></div>
+                        </a>
+
+                        <div class="te-content">
+                            <div class="te-artist-block">
+                                <h3 class="te-artist-name">HEADLINER NAME</h3>
+                                <p class="te-artist-credits">HBO / SPECIAL</p>
+                            </div>
+
+                            <div class="te-schedule-grouped">
+                                <div class="te-grouped-row">
+                                    <div class="te-date-col">
+                                        <span class="d-day">SAT</span>
+                                        <span class="d-num">JAN 24</span>
+                                    </div>
+                                    <div class="te-times-col">
+                                        <span class="te-time-pill">7:00PM</span>
+                                        <span class="te-time-pill">9:30PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/events/comedian-rr-3" class="te-main-cta">GET TICKETS</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="te-slider-nav">
+                    <button class="te-slider-btn te-slider-prev" aria-label="Previous slide">←</button>
+                    <button class="te-slider-btn te-slider-next" aria-label="Next slide">→</button>
+                </div>
+
+                <!-- Mobile Dots -->
+                <div class="te-slider-dots"></div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="/locations/redroom" class="te-btn te-btn-primary te-btn-lg">VIEW ALL RED ROOM SHOWS</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DALLAS SLIDER -->
+    <section class="te-section te-location-slider" id="dallas-slider" style="background: var(--te-off-white);">
+        <div class="te-container">
+
+            <div class="te-section-header">
+                <h2 class="te-section-title">DALLAS_SHOWS</h2>
+                <div class="te-section-meta">
+                    <div class="te-location-badge dallas">
+                        <span class="loc-id">DAL-TX</span>
+                        <span class="loc-name">DALLAS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dallas Slider -->
+            <div class="te-slider-wrapper te-slider">
+                <div class="te-slider-container" id="dallas-shows-slider">
+
+                    <!-- Dallas Card 1 -->
+                    <article class="te-card" data-location="dallas">
+                        <div class="te-card-header">
+                            <div class="te-location-badge dallas">
+                                <span class="loc-id">DAL-TX</span>
+                                <span class="loc-name">DALLAS</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <a href="/events/learnmore-jonasi" class="te-image-container">
+                            <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648724009010"
+                                alt="Learnmore Jonasi">
+                            <div class="te-overlay-scan"></div>
+                        </a>
+
+                        <div class="te-content">
+                            <div class="te-artist-block">
+                                <h3 class="te-artist-name">LEARNMORE JONASI</h3>
+                                <p class="te-artist-credits">AGT WINNER / COMEDY CENTRAL</p>
+                            </div>
+
+                            <div class="te-schedule-grouped">
+                                <div class="te-grouped-row">
+                                    <div class="te-date-col">
+                                        <span class="d-day">FRI</span>
+                                        <span class="d-num">JAN 09</span>
+                                    </div>
+                                    <div class="te-times-col">
+                                        <span class="te-time-pill">8:00PM</span>
+                                        <span class="te-time-pill">10:00PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/events/learnmore-jonasi" class="te-main-cta">GET TICKETS</a>
+                        </div>
+                    </article>
+
+                    <!-- Dallas Card 2 -->
+                    <article class="te-card" data-location="dallas">
+                        <div class="te-card-header">
+                            <div class="te-location-badge dallas">
+                                <span class="loc-id">DAL-TX</span>
+                                <span class="loc-name">DALLAS</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <a href="/events/comedian-dal-2" class="te-image-container">
+                            <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2853111880148553046"
+                                alt="Dallas Comedian">
+                            <div class="te-overlay-scan"></div>
+                        </a>
+
+                        <div class="te-content">
+                            <div class="te-artist-block">
+                                <h3 class="te-artist-name">NEXT WEEK HEADLINER</h3>
+                                <p class="te-artist-credits">COMEDY CENTRAL / HBO</p>
+                            </div>
+
+                            <div class="te-schedule-grouped">
+                                <div class="te-grouped-row">
+                                    <div class="te-date-col">
+                                        <span class="d-day">FRI</span>
+                                        <span class="d-num">JAN 16</span>
+                                    </div>
+                                    <div class="te-times-col">
+                                        <span class="te-time-pill">8:00PM</span>
+                                        <span class="te-time-pill">10:00PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/events/comedian-dal-2" class="te-main-cta">GET TICKETS</a>
+                        </div>
+                    </article>
+
+                    <!-- Dallas Card 3 -->
+                    <article class="te-card" data-location="dallas">
+                        <div class="te-card-header">
+                            <div class="te-location-badge dallas">
+                                <span class="loc-id">DAL-TX</span>
+                                <span class="loc-name">DALLAS</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <a href="/events/comedian-dal-3" class="te-image-container">
+                            <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648678028905"
+                                alt="Dallas Comedian">
+                            <div class="te-overlay-scan"></div>
+                        </a>
+
+                        <div class="te-content">
+                            <div class="te-artist-block">
+                                <h3 class="te-artist-name">UPCOMING HEADLINER</h3>
+                                <p class="te-artist-credits">HBO / NETFLIX</p>
+                            </div>
+
+                            <div class="te-schedule-grouped">
+                                <div class="te-grouped-row">
+                                    <div class="te-date-col">
+                                        <span class="d-day">SAT</span>
+                                        <span class="d-num">JAN 24</span>
+                                    </div>
+                                    <div class="te-times-col">
+                                        <span class="te-time-pill">7:00PM</span>
+                                        <span class="te-time-pill">9:30PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/events/comedian-dal-3" class="te-main-cta">GET TICKETS</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="te-slider-nav">
+                    <button class="te-slider-btn te-slider-prev" aria-label="Previous slide">←</button>
+                    <button class="te-slider-btn te-slider-next" aria-label="Next slide">→</button>
+                </div>
+
+                <!-- Mobile Dots -->
+                <div class="te-slider-dots"></div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="/locations/dallas" class="te-btn te-btn-primary te-btn-lg">VIEW ALL DALLAS SHOWS</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ALBUQUERQUE SLIDER -->
+    <section class="te-section te-location-slider" id="albuquerque-slider" style="background: var(--te-white);">
+        <div class="te-container">
+
+            <div class="te-section-header">
+                <h2 class="te-section-title">ALBUQUERQUE_SHOWS</h2>
+                <div class="te-section-meta">
+                    <div class="te-location-badge albuquerque">
+                        <span class="loc-id">ABQ-NM</span>
+                        <span class="loc-name">ALBUQUERQUE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Albuquerque Slider -->
+            <div class="te-slider-wrapper te-slider">
+                <div class="te-slider-container" id="albuquerque-shows-slider">
+
+                    <!-- Albuquerque Card 1 -->
+                    <article class="te-card" data-location="albuquerque">
+                        <div class="te-card-header">
+                            <div class="te-location-badge albuquerque">
+                                <span class="loc-id">ABQ-NM</span>
+                                <span class="loc-name">ALBUQUERQUE</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <a href="/events/sam-tallent" class="te-image-container">
+                            <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648678028905"
+                                alt="Sam Tallent">
+                            <div class="te-overlay-scan"></div>
+                        </a>
+
+                        <div class="te-content">
+                            <div class="te-artist-block">
+                                <h3 class="te-artist-name">SAM TALLENT</h3>
+                                <p class="te-artist-credits">COMEDIAN / WRITER</p>
+                            </div>
+
+                            <div class="te-schedule-grouped">
+                                <div class="te-grouped-row">
+                                    <div class="te-date-col">
+                                        <span class="d-day">FRI</span>
+                                        <span class="d-num">FEB 20</span>
+                                    </div>
+                                    <div class="te-times-col">
+                                        <span class="te-time-pill">7:30PM</span>
+                                        <span class="te-time-pill">9:30PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/events/sam-tallent" class="te-main-cta">GET TICKETS</a>
+                        </div>
+                    </article>
+
+                    <!-- Albuquerque Card 2 -->
+                    <article class="te-card" data-location="albuquerque">
+                        <div class="te-card-header">
+                            <div class="te-location-badge albuquerque">
+                                <span class="loc-id">ABQ-NM</span>
+                                <span class="loc-name">ALBUQUERQUE</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <a href="/events/comedian-abq-2" class="te-image-container">
+                            <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2852852648724009010"
+                                alt="Albuquerque Comedian">
+                            <div class="te-overlay-scan"></div>
+                        </a>
+
+                        <div class="te-content">
+                            <div class="te-artist-block">
+                                <h3 class="te-artist-name">NEXT WEEK COMEDIAN</h3>
+                                <p class="te-artist-credits">COMEDY CENTRAL / NETFLIX</p>
+                            </div>
+
+                            <div class="te-schedule-grouped">
+                                <div class="te-grouped-row">
+                                    <div class="te-date-col">
+                                        <span class="d-day">FRI</span>
+                                        <span class="d-num">FEB 27</span>
+                                    </div>
+                                    <div class="te-times-col">
+                                        <span class="te-time-pill">7:30PM</span>
+                                        <span class="te-time-pill">9:30PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/events/comedian-abq-2" class="te-main-cta">GET TICKETS</a>
+                        </div>
+                    </article>
+
+                    <!-- Albuquerque Card 3 -->
+                    <article class="te-card" data-location="albuquerque">
+                        <div class="te-card-header">
+                            <div class="te-location-badge albuquerque">
+                                <span class="loc-id">ABQ-NM</span>
+                                <span class="loc-name">ALBUQUERQUE</span>
+                            </div>
+                            <div class="te-ui-dots">UPCOMING</div>
+                        </div>
+
+                        <a href="/events/comedian-abq-3" class="te-image-container">
+                            <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2853111880148553046"
+                                alt="Albuquerque Comedian">
+                            <div class="te-overlay-scan"></div>
+                        </a>
+
+                        <div class="te-content">
+                            <div class="te-artist-block">
+                                <h3 class="te-artist-name">LOCAL FAVORITE</h3>
+                                <p class="te-artist-credits">ABQ NATIVE</p>
+                            </div>
+
+                            <div class="te-schedule-grouped">
+                                <div class="te-grouped-row">
+                                    <div class="te-date-col">
+                                        <span class="d-day">SAT</span>
+                                        <span class="d-num">MAR 06</span>
+                                    </div>
+                                    <div class="te-times-col">
+                                        <span class="te-time-pill">7:00PM</span>
+                                        <span class="te-time-pill">9:30PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/events/comedian-abq-3" class="te-main-cta">GET TICKETS</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="te-slider-nav">
+                    <button class="te-slider-btn te-slider-prev" aria-label="Previous slide">←</button>
+                    <button class="te-slider-btn te-slider-next" aria-label="Next slide">→</button>
+                </div>
+
+                <!-- Mobile Dots -->
+                <div class="te-slider-dots"></div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="/locations/albuquerque" class="te-btn te-btn-primary te-btn-lg">VIEW ALL ABQ SHOWS</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LOCATIONS SECTION -->
+    <section class="te-section" id="locations" style="background: var(--te-off-white);">
+        <div class="te-container">
+
+            <div class="te-section-header">
+                <h2 class="te-section-title">OUR_LOCATIONS</h2>
+                <div class="te-section-meta">
+                    <span>3 VENUES</span>
+                </div>
+            </div>
+
+            <div class="te-grid te-grid-3">
+
+                <!-- Dallas -->
+                <div class="te-card">
+                    <div class="te-card-header">
+                        <div class="te-location-badge dallas">
+                            <span class="loc-id">DAL-TX</span>
+                            <span class="loc-name">DALLAS</span>
+                        </div>
+                    </div>
+                    <div class="te-content">
+                        <h3 class="te-artist-name" style="margin-bottom: var(--space-4);">DALLAS LOCATION</h3>
+                        <p
+                            style="font-family: var(--font-mono); font-size: var(--text-sm); margin-bottom: var(--space-4); line-height: 1.6;">
+                            2525 E Arkansas Ln<br>
+                            Arlington, TX 76010<br>
+                            (817) 226-5233
+                        </p>
+                        <a href="/locations/dallas" class="te-btn te-btn-primary te-btn-block">VIEW DETAILS</a>
+                    </div>
+                </div>
+
+                <!-- Fort Worth -->
+                <div class="te-card">
+                    <div class="te-card-header">
+                        <div class="te-location-badge fort-worth">
+                            <span class="loc-id">FW-TX</span>
+                            <span class="loc-name">FORT WORTH</span>
+                        </div>
+                    </div>
+                    <div class="te-content">
+                        <h3 class="te-artist-name" style="margin-bottom: var(--space-4);">FORT WORTH LOCATION</h3>
+                        <p
+                            style="font-family: var(--font-mono); font-size: var(--text-sm); margin-bottom: var(--space-4); line-height: 1.6;">
+                            604 Main St<br>
+                            Fort Worth, TX 76102<br>
+                            (817) 877-5233
+                        </p>
+                        <a href="/locations/fortworth" class="te-btn te-btn-primary te-btn-block">VIEW DETAILS</a>
+                    </div>
+                </div>
+
+                <!-- Albuquerque -->
+                <div class="te-card">
+                    <div class="te-card-header">
+                        <div class="te-location-badge albuquerque">
+                            <span class="loc-id">ABQ-NM</span>
+                            <span class="loc-name">ALBUQUERQUE</span>
+                        </div>
+                    </div>
+                    <div class="te-content">
+                        <h3 class="te-artist-name" style="margin-bottom: var(--space-4);">ALBUQUERQUE LOCATION</h3>
+                        <p
+                            style="font-family: var(--font-mono); font-size: var(--text-sm); margin-bottom: var(--space-4); line-height: 1.6;">
+                            4520 Alexander Blvd NE<br>
+                            Albuquerque, NM 87107<br>
+                            (505) 883-5233
+                        </p>
+                        <a href="/locations/albuquerque" class="te-btn te-btn-primary te-btn-block">VIEW DETAILS</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="te-footer">
+        <div class="te-container">
+
+            <div class="te-footer-grid">
+
+                <div class="te-footer-col">
+                    <h4>HYENAS</h4>
+                    <p
+                        style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--te-gray-light); line-height: 1.6;">
+                        The premier comedy club experience in Texas and New Mexico since 1989.
+                    </p>
+                </div>
+
+                <div class="te-footer-col">
+                    <h4>LOCATIONS</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="/locations/dallas">Dallas</a></li>
+                        <li><a href="/locations/fortworth">Fort Worth</a></li>
+                        <li><a href="/locations/albuquerque">Albuquerque</a></li>
+                        <li><a href="/locations/redroom">Red Room</a></li>
+                    </ul>
+                </div>
+
+                <div class="te-footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="/shows">Upcoming Shows</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/private-events">Private Events</a></li>
+                    </ul>
+                </div>
+
+                <div class="te-footer-col">
+                    <h4>CONNECT</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="https://facebook.com/hyenascomedy">Facebook</a></li>
+                        <li><a href="https://instagram.com/hyenascomedy">Instagram</a></li>
+                        <li><a href="https://twitter.com/hyenascomedy">Twitter</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="te-footer-bottom">
+                <div>© 2026 HYENAS COMEDY NIGHTCLUB. ALL RIGHTS RESERVED.</div>
+                <div>
+                    <a href="/privacy" style="margin-right: var(--space-4);">PRIVACY POLICY</a>
+                    <a href="/terms">TERMS OF SERVICE</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/navigation.js"></script>
+    <script src="../js/filters.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/slider.js"></script>
+
+    <!-- Hero Background Rotation -->
+    <script>
+        (function () {
+            const heroImages = [
+                'https://cdn.prod.website-files.com/626314d81c6e619157def12e/6962ff4783b029ac3339be52_hcc-bgd_3.webp',
+                'https://cdn.prod.website-files.com/626314d81c6e619157def12e/6962ff47eaa0084ad19853f9_hcc-bgd_2.webp',
+                'https://cdn.prod.website-files.com/626314d81c6e619157def12e/6962ff4779cf74d51e99628c_hcc-bgd_4.webp',
+                'https://cdn.prod.website-files.com/626314d81c6e619157def12e/6962ff460f0bbc094708695f_hcc-bgd_1.webp'
+            ];
+
+            // Pick a random image on each page load
+            const randomIndex = Math.floor(Math.random() * heroImages.length);
+            const selectedImage = heroImages[randomIndex];
+
+            const heroBg = document.getElementById('hero-bg-image');
+            if (heroBg) {
+                heroBg.style.backgroundImage = `url('${selectedImage}')`;
+            }
+        })();
+    </script>
+
+</body>
+
+</html>

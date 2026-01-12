@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "mcp__MCP_DOCKER__mcp-config-set",
+      "mcp__MCP_DOCKER__search_jobs"
+    ]
+  }
+}
