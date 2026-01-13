@@ -1,0 +1,394 @@
+{
+  "metadata": {
+    "title": "Hyena's Comedy Club Master Menu",
+    "lastUpdated": "2025-01-12",
+    "version": "1.0"
+  },
+  "locations": {
+    "albuquerque": {
+      "name": "Hyena's Albuquerque",
+      "categories": {
+        "nonAlcoholic": {
+          "categoryName": "Amateur Night Virgin Drinks",
+          "items": [
+            {
+              "name": "Bottled Water",
+              "price": 3.00,
+              "description": null
+            },
+            {
+              "name": "Crazy Berry",
+              "price": 8.00,
+              "description": "Virgin Strawberry Daiquiri"
+            },
+            {
+              "name": "Giggle Juice",
+              "price": 5.00,
+              "description": "Coconut Flavored Fruit Punch"
+            },
+            {
+              "name": "Heineken 0.0",
+              "price": 8.00,
+              "description": "Non-Alcoholic Beer"
+            },
+            {
+              "name": "Juice",
+              "price": 3.00,
+              "description": "Options: Orange Juice, Cranberry, Pineapple"
+            },
+            {
+              "name": "Looney Tunes",
+              "price": 8.00,
+              "description": "Virgin Peach Pina Colada"
+            },
+            {
+              "name": "Red Bull",
+              "price": 6.00,
+              "description": null
+            },
+            {
+              "name": "SF Red Bull",
+              "price": 6.00,
+              "description": "Sugar Free Red Bull"
+            },
+            {
+              "name": "Soda",
+              "price": 3.00,
+              "description": "Options: Coke, Diet Coke, Sprite, Dr. Pepper"
+            },
+            {
+              "name": "Topo Chico",
+              "price": 4.00,
+              "description": null
+            }
+          ]
+        },
+        "beer": {
+          "categoryName": "Beer",
+          "subcategories": {
+            "domestic": {
+              "subcategoryName": "Domestic Beer",
+              "items": [
+                {
+                  "name": "Bud Light",
+                  "price": 6.00
+                },
+                {
+                  "name": "Budweiser",
+                  "price": 6.00
+                },
+                {
+                  "name": "Coors Light",
+                  "price": 6.00
+                },
+                {
+                  "name": "Lone Star",
+                  "price": 6.00
+                },
+                {
+                  "name": "Miller Lite",
+                  "price": 6.00
+                }
+              ]
+            },
+            "premium": {
+              "subcategoryName": "Premium Beer",
+              "items": [
+                {
+                  "name": "Blue Moon",
+                  "price": 7.00
+                },
+                {
+                  "name": "Corona",
+                  "price": 7.00
+                },
+                {
+                  "name": "Dos XX",
+                  "price": 7.00
+                },
+                {
+                  "name": "Heineken",
+                  "price": 7.00
+                },
+                {
+                  "name": "Shiner Bock",
+                  "price": 7.00
+                }
+              ]
+            },
+            "superPremium": {
+              "subcategoryName": "Super Premium",
+              "items": [
+                {
+                  "name": "Angry Orchard",
+                  "price": 8.00
+                },
+                {
+                  "name": "Guinness",
+                  "price": 8.00
+                },
+                {
+                  "name": "Negra Modelo",
+                  "price": 8.00
+                },
+                {
+                  "name": "Truly",
+                  "price": 8.00
+                }
+              ]
+            }
+          }
+        },
+        "food": {
+          "categoryName": "Munchies",
+          "items": [
+            {
+              "name": "Nachos",
+              "price": 10.00,
+              "description": "Beef or Chicken. Topped with Queso, Jalapenos, & Sour Cream"
+            },
+            {
+              "name": "Boneless Wings (10)",
+              "price": 12.00,
+              "description": "BBQ, Buffalo, or Garlic Parmesan"
+            },
+            {
+              "name": "Mozzarella Sticks",
+              "price": 9.00,
+              "description": "Served with Marinara"
+            },
+            {
+              "name": "Chips & Salsa",
+              "price": 5.00,
+              "description": null
+            },
+            {
+              "name": "Chips & Queso",
+              "price": 7.00,
+              "description": null
+            },
+            {
+              "name": "Fried Pickles",
+              "price": 9.00,
+              "description": "Served with Ranch"
+            },
+            {
+              "name": "Edamame",
+              "price": 9.00,
+              "description": "Steamed Soybean Pods Topped with Salt"
+            },
+            {
+              "name": "Popcorn",
+              "price": 6.00,
+              "description": "Choice of Movie Butter or Featured Flavor"
+            }
+          ]
+        }
+      }
+    },
+    "dallas": {
+      "name": "Hyena's Dallas",
+      "categories": {
+        "beer": {
+          "categoryName": "Beer",
+          "subcategories": {
+            "domestic": {
+              "subcategoryName": "Domestic",
+              "items": [
+                {
+                  "name": "Bud Light",
+                  "price": 6.00
+                },
+                {
+                  "name": "Miller Lite",
+                  "price": 6.00
+                }
+              ]
+            },
+            "premium": {
+              "subcategoryName": "Premium",
+              "items": [
+                {
+                  "name": "Corona",
+                  "price": 7.00
+                },
+                {
+                  "name": "Dos XX",
+                  "price": 7.00
+                }
+              ]
+            },
+            "superPremium": {
+              "subcategoryName": "Super Premium",
+              "items": [
+                {
+                  "name": "Deep Ellum IPA",
+                  "price": 8.00
+                }
+              ]
+            },
+            "ultraPremium": {
+              "subcategoryName": "Ultra Premium",
+              "items": [
+                {
+                  "name": "Lakewood Temptress",
+                  "price": 9.00
+                }
+              ]
+            }
+          }
+        },
+        "dinnerBaskets": {
+          "categoryName": "Dinner Baskets",
+          "items": [
+            {
+              "name": "Brisket Sliders",
+              "price": 14.00,
+              "description": "3 Brisket Sliders Served with Kettle Chips"
+            },
+            {
+              "name": "Brisket Tacos",
+              "price": 14.00,
+              "description": "3 BBQ Brisket Tacos with BBQ Sauce, Onions, & Coleslaw on Flour Tortillas"
+            },
+            {
+              "name": "Hyena's Nachos",
+              "price": 12.00,
+              "description": "Tortilla Chips with Queso, Jalapeños, Guacamole; Add Brisket – $3"
+            },
+            {
+              "name": "Chicken Tender Basket",
+              "price": 13.00,
+              "description": "Served with Fries"
+            },
+            {
+              "name": "Popcorn Shrimp",
+              "price": 13.00,
+              "description": "Served with Fries"
+            }
+          ]
+        },
+        "snacksAndMunchies": {
+          "categoryName": "Snacks & Munchies",
+          "items": [
+            {
+              "name": "Chips Trio",
+              "price": 9.00,
+              "description": "Tortilla Chips Served with Salsa, Guacamole, & Queso"
+            },
+            {
+              "name": "Fried Pickles",
+              "price": 9.00,
+              "description": "Served with Ranch"
+            },
+            {
+              "name": "Mozzarella Sticks",
+              "price": 9.00,
+              "description": "Served with Marinara"
+            },
+            {
+              "name": "Chicken Quesadilla",
+              "price": 12.00,
+              "description": null
+            }
+          ]
+        },
+        "cocktails": {
+          "categoryName": "Headliners",
+          "items": [
+            {
+              "name": "Bill \"Bloody\" Murray",
+              "price": 12.00,
+              "description": "Bloody Mary with a Special 'Kick'"
+            },
+            {
+              "name": "Don Rickles",
+              "price": 12.00,
+              "description": "Classic Old Fashioned Made with Bulleit Rye"
+            },
+            {
+              "name": "Joan Rivers",
+              "price": 12.00,
+              "description": "Deep Eddy Cranberry Vodka, Peach Schnapps, & Lemonade"
+            }
+          ]
+        }
+      }
+    },
+    "fortWorth": {
+      "name": "Hyena's Fort Worth",
+      "categories": {
+        "dinnerBaskets": {
+          "categoryName": "Dinner Baskets",
+          "items": [
+            {
+              "name": "Chicken Tenders",
+              "price": 15.00,
+              "description": "Crispy Fried Tenders Served with French Fries & Honey Mustard"
+            },
+            {
+              "name": "Chicken Wings",
+              "price": 12.00,
+              "description": "10 Wings. Choice of Buffalo, Teriyaki, or Naked"
+            },
+            {
+              "name": "Hyena's Sampler",
+              "price": 15.00,
+              "description": "Wings, Mozzarella Sticks, Taquitos, & Jalapeño Poppers"
+            },
+            {
+              "name": "Jalapeño Poppers",
+              "price": 10.00,
+              "description": null
+            },
+            {
+              "name": "Taquitos",
+              "price": 10.00,
+              "description": null
+            },
+            {
+              "name": "French Fries",
+              "price": 7.00,
+              "description": null
+            }
+          ]
+        },
+        "martinis": {
+          "categoryName": "Martinis",
+          "items": [
+            {
+              "name": "Kaufman Martini",
+              "price": 12.00,
+              "description": "Espresso Vodka, Stoli Vanilla, Coffee Liqueur"
+            },
+            {
+              "name": "Pink Lemon Tini",
+              "price": 12.00,
+              "description": "Deep Eddy Lemon Vodka, Deep Eddy Cranberry Vodka"
+            },
+            {
+              "name": "Apple Martini",
+              "price": 12.00,
+              "description": "Tito's Vodka, Apple Pucker, Sweet & Sour"
+            }
+          ]
+        },
+        "dessert": {
+          "categoryName": "Dessert",
+          "items": [
+            {
+              "name": "Cheesecake",
+              "price": 9.00,
+              "description": "NY Style Cheesecake with Choice of Caramel, Chocolate, or Raspberry"
+            },
+            {
+              "name": "Churros",
+              "price": 7.00,
+              "description": null
+            }
+          ]
+        }
+      }
+    }
+  }
+}

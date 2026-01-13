@@ -1,0 +1,438 @@
+<!-- 
+  HYENAS COMEDY CLUB - COMPONENT EXAMPLES
+  HTML snippets for implementing the Teenage Engineering-inspired design system
+-->
+
+<!-- ============================================
+     HOMEPAGE HERO SECTION
+     ============================================ -->
+
+<section class="hero py-10 bg-purple text-white">
+  <div class="container">
+    <div class="flex flex-col items-center text-center gap-6">
+      <span class="badge badge-yellow animate-bounce">NOW SHOWING</span>
+      <h1 class="gradient-text">Laugh Until It Hurts</h1>
+      <p class="text-xl" style="max-width: 600px; color: var(--gray-100);">
+        Four legendary venues. Endless laughs. The best comedy in Texas and New Mexico.
+      </p>
+      <div class="flex gap-4" style="flex-wrap: wrap; justify-content: center;">
+        <a href="#shows" class="btn btn-accent btn-lg">Browse Shows</a>
+        <a href="#venues" class="btn btn-secondary btn-lg" style="color: white; border-color: white;">Our Venues</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     UPCOMING SHOWS GRID
+     ============================================ -->
+
+<section class="py-10">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="text-center mb-8">
+      <h2 class="mb-2">Upcoming Shows</h2>
+      <p class="text-gray">The funniest people on the planet, coming to a Hyenas near you</p>
+    </div>
+    
+    <!-- Shows Grid - Auto-responsive -->
+    <div class="grid grid-auto">
+      
+      <!-- Show Card Example 1 -->
+      <article class="show-card">
+        <div class="show-card__image">
+          <img src="comedian-headshot.jpg" alt="Comedian Name">
+          <span class="show-card__badge">Sold Out</span>
+        </div>
+        <div class="show-card__content">
+          <div class="show-card__date">FRI, JAN 10 • 8:00 PM</div>
+          <h3 class="show-card__title">Comedian Name</h3>
+          <div class="show-card__venue">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 0C5.2 0 3 2.2 3 5c0 3.9 5 11 5 11s5-7.1 5-11c0-2.8-2.2-5-5-5zm0 7.5c-1.4 0-2.5-1.1-2.5-2.5S6.6 2.5 8 2.5s2.5 1.1 2.5 2.5S9.4 7.5 8 7.5z"/>
+            </svg>
+            <span>Hyenas Dallas</span>
+          </div>
+          <p class="show-card__description">
+            Award-winning comedian brings their hilarious take on modern life to the stage.
+          </p>
+          <div class="show-card__footer">
+            <span class="show-card__price">$25</span>
+            <a href="#" class="btn btn-primary btn-sm">Get Tickets</a>
+          </div>
+        </div>
+      </article>
+      
+      <!-- Show Card Example 2 - Available -->
+      <article class="show-card">
+        <div class="show-card__image">
+          <img src="comedian-headshot-2.jpg" alt="Another Comedian">
+          <span class="show-card__badge" style="background: var(--accent-lime);">On Sale</span>
+        </div>
+        <div class="show-card__content">
+          <div class="show-card__date">SAT, JAN 11 • 7:00 PM</div>
+          <h3 class="show-card__title">Another Great Comedian</h3>
+          <div class="show-card__venue">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 0C5.2 0 3 2.2 3 5c0 3.9 5 11 5 11s5-7.1 5-11c0-2.8-2.2-5-5-5zm0 7.5c-1.4 0-2.5-1.1-2.5-2.5S6.6 2.5 8 2.5s2.5 1.1 2.5 2.5S9.4 7.5 8 7.5z"/>
+            </svg>
+            <span>Hyenas Fort Worth</span>
+          </div>
+          <p class="show-card__description">
+            Fresh off their Netflix special, this rising star delivers non-stop laughs.
+          </p>
+          <div class="show-card__footer">
+            <span class="show-card__price">$30</span>
+            <a href="#" class="btn btn-primary btn-sm">Get Tickets</a>
+          </div>
+        </div>
+      </article>
+      
+      <!-- Show Card Example 3 -->
+      <article class="show-card">
+        <div class="show-card__image">
+          <img src="comedian-headshot-3.jpg" alt="Third Comedian">
+        </div>
+        <div class="show-card__content">
+          <div class="show-card__date">SUN, JAN 12 • 8:30 PM</div>
+          <h3 class="show-card__title">Comedy Legend</h3>
+          <div class="show-card__venue">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 0C5.2 0 3 2.2 3 5c0 3.9 5 11 5 11s5-7.1 5-11c0-2.8-2.2-5-5-5zm0 7.5c-1.4 0-2.5-1.1-2.5-2.5S6.6 2.5 8 2.5s2.5 1.1 2.5 2.5S9.4 7.5 8 7.5z"/>
+            </svg>
+            <span>Hyenas Albuquerque</span>
+          </div>
+          <p class="show-card__description">
+            Comedy royalty graces our stage with decades of experience and timeless humor.
+          </p>
+          <div class="show-card__footer">
+            <span class="show-card__price">$45</span>
+            <a href="#" class="btn btn-primary btn-sm">Get Tickets</a>
+          </div>
+        </div>
+      </article>
+      
+    </div>
+    
+    <!-- View All Shows Button -->
+    <div class="text-center mt-8">
+      <a href="/shows" class="btn btn-secondary btn-lg">View All Shows</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     VENUE CARDS SECTION
+     ============================================ -->
+
+<section class="py-10 bg-gray-100">
+  <div class="container">
+    <div class="text-center mb-8">
+      <h2 class="mb-2">Our Venues</h2>
+      <p class="text-gray">Four iconic locations across Texas and New Mexico</p>
+    </div>
+    
+    <div class="grid grid-2" style="gap: var(--space-8);">
+      
+      <!-- Venue Card - Dallas -->
+      <div class="brutal-border" style="background: white; padding: var(--space-6); border-radius: var(--radius-lg);">
+        <div class="flex items-start gap-4 mb-4">
+          <div style="width: 80px; height: 80px; background: var(--hyenas-purple); border-radius: var(--radius-md); flex-shrink: 0;"></div>
+          <div>
+            <h3 class="mb-2">Hyenas Dallas</h3>
+            <p class="text-sm text-gray mb-0">The flagship venue in the heart of Dallas</p>
+          </div>
+        </div>
+        <p class="mb-4">
+          Our premier comedy destination featuring top-tier national acts in an intimate setting.
+        </p>
+        <div class="flex gap-3">
+          <a href="/venues/dallas" class="btn btn-primary">Explore Venue</a>
+          <a href="/venues/dallas#shows" class="btn btn-ghost">See Shows</a>
+        </div>
+      </div>
+      
+      <!-- Venue Card - Fort Worth -->
+      <div class="brutal-border" style="background: white; padding: var(--space-6); border-radius: var(--radius-lg);">
+        <div class="flex items-start gap-4 mb-4">
+          <div style="width: 80px; height: 80px; background: var(--accent-electric); border-radius: var(--radius-md); flex-shrink: 0;"></div>
+          <div>
+            <h3 class="mb-2">Hyenas Fort Worth</h3>
+            <p class="text-sm text-gray mb-0">Comedy in the heart of Cowtown</p>
+          </div>
+        </div>
+        <p class="mb-4">
+          Fort Worth's favorite comedy club with killer shows and an unbeatable atmosphere.
+        </p>
+        <div class="flex gap-3">
+          <a href="/venues/fort-worth" class="btn btn-primary">Explore Venue</a>
+          <a href="/venues/fort-worth#shows" class="btn btn-ghost">See Shows</a>
+        </div>
+      </div>
+      
+      <!-- Venue Card - Albuquerque -->
+      <div class="brutal-border" style="background: white; padding: var(--space-6); border-radius: var(--radius-lg);">
+        <div class="flex items-start gap-4 mb-4">
+          <div style="width: 80px; height: 80px; background: var(--accent-neon-pink); border-radius: var(--radius-md); flex-shrink: 0;"></div>
+          <div>
+            <h3 class="mb-2">Hyenas Albuquerque</h3>
+            <p class="text-sm text-gray mb-0">New Mexico's comedy hotspot</p>
+          </div>
+        </div>
+        <p class="mb-4">
+          Bringing world-class comedy to the Land of Enchantment since day one.
+        </p>
+        <div class="flex gap-3">
+          <a href="/venues/albuquerque" class="btn btn-primary">Explore Venue</a>
+          <a href="/venues/albuquerque#shows" class="btn btn-ghost">See Shows</a>
+        </div>
+      </div>
+      
+      <!-- Venue Card - Red Room -->
+      <div class="brutal-border" style="background: white; padding: var(--space-6); border-radius: var(--radius-lg);">
+        <div class="flex items-start gap-4 mb-4">
+          <div style="width: 80px; height: 80px; background: var(--accent-cyan); border-radius: var(--radius-md); flex-shrink: 0;"></div>
+          <div>
+            <h3 class="mb-2">The Red Room</h3>
+            <p class="text-sm text-gray mb-0">Intimate shows, big laughs</p>
+          </div>
+        </div>
+        <p class="mb-4">
+          Our exclusive smaller venue perfect for up-and-coming talent and special events.
+        </p>
+        <div class="flex gap-3">
+          <a href="/venues/red-room" class="btn btn-primary">Explore Venue</a>
+          <a href="/venues/red-room#shows" class="btn btn-ghost">See Shows</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SINGLE EVENT PAGE - DETAILED VIEW
+     ============================================ -->
+
+<section class="py-10">
+  <div class="container container-lg">
+    <div class="grid" style="grid-template-columns: 1fr 400px; gap: var(--space-8);">
+      
+      <!-- Main Content -->
+      <div>
+        <!-- Breadcrumbs -->
+        <nav class="mb-4" aria-label="Breadcrumb">
+          <ol class="flex gap-2 text-sm text-gray">
+            <li><a href="/">Home</a></li>
+            <li>/</li>
+            <li><a href="/shows">Shows</a></li>
+            <li>/</li>
+            <li>Comedian Name</li>
+          </ol>
+        </nav>
+        
+        <!-- Event Header -->
+        <div class="mb-6">
+          <div class="flex gap-3 mb-3">
+            <span class="badge badge-purple">Stand-up</span>
+            <span class="badge badge-yellow">Featured</span>
+          </div>
+          <h1 class="mb-3">Comedian Name: Tour Title</h1>
+          <div class="flex gap-6 text-gray">
+            <div class="flex items-center gap-2">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M6 2a1 1 0 011-1h6a1 1 0 011 1v1h3a1 1 0 110 2H3a1 1 0 010-2h3V2zm0 4v12a2 2 0 002 2h4a2 2 0 002-2V6H6z"/>
+              </svg>
+              <span class="font-semibold">Friday, January 10, 2026</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9V7h2v6z"/>
+              </svg>
+              <span class="font-semibold">8:00 PM - 10:00 PM</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 0C6.5 0 3.8 2.8 3.8 6.3c0 4.9 6.3 13.8 6.3 13.8s6.3-8.9 6.3-13.8C16.3 2.8 13.5 0 10 0zm0 9.4c-1.7 0-3.1-1.4-3.1-3.1S8.3 3.1 10 3.1s3.1 1.4 3.1 3.1S11.7 9.4 10 9.4z"/>
+              </svg>
+              <span class="font-semibold">Hyenas Dallas</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Event Image -->
+        <div style="width: 100%; aspect-ratio: 16/9; background: var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--space-8);">
+          <img src="event-hero.jpg" alt="Comedian Name performing" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        
+        <!-- Event Description -->
+        <div class="pill-divider">
+          <h2 class="mb-4">About This Show</h2>
+          <p>
+            Get ready for an unforgettable night of comedy as award-winning comedian [Name] brings their 
+            critically acclaimed tour to Hyenas Dallas. Known for their sharp wit and hilarious observations 
+            about modern life, this is one show you don't want to miss.
+          </p>
+          <p>
+            Fresh off their Netflix special and multiple late-night appearances, [Name] has been making 
+            audiences laugh from coast to coast. Their unique perspective and high-energy performance style 
+            guarantees a night of non-stop entertainment.
+          </p>
+          <p>
+            Doors open at 7:00 PM. Show starts promptly at 8:00 PM. Must be 18+ to attend.
+          </p>
+        </div>
+        
+        <!-- Venue Info -->
+        <div class="pill-divider">
+          <h3 class="mb-4">Venue Information</h3>
+          <div class="brutal-border" style="background: var(--gray-100); padding: var(--space-5); border-radius: var(--radius-lg);">
+            <h4 class="mb-3">Hyenas Dallas</h4>
+            <p class="mb-3">
+              123 Comedy Lane<br>
+              Dallas, TX 75201
+            </p>
+            <a href="/venues/dallas" class="btn btn-secondary btn-sm">View Venue Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sidebar - Ticket Purchase -->
+      <div>
+        <div class="brutal-border" style="background: white; padding: var(--space-6); border-radius: var(--radius-lg); position: sticky; top: var(--space-4);">
+          <h3 class="mb-4">Get Tickets</h3>
+          
+          <!-- Pricing Options -->
+          <div class="mb-6">
+            <div style="padding: var(--space-4); background: var(--gray-100); border-radius: var(--radius-md); margin-bottom: var(--space-3);">
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">General Admission</span>
+                <span class="text-2xl font-bold text-purple">$25</span>
+              </div>
+              <p class="text-sm text-gray mb-0">Standard seating</p>
+            </div>
+            
+            <div style="padding: var(--space-4); background: var(--hyenas-purple-pale); border: 2px solid var(--hyenas-purple); border-radius: var(--radius-md); margin-bottom: var(--space-3);">
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">VIP Seating</span>
+                <span class="text-2xl font-bold text-purple">$45</span>
+              </div>
+              <p class="text-sm text-gray mb-2">Front row • Meet & greet</p>
+              <span class="badge badge-yellow">Best Value</span>
+            </div>
+          </div>
+          
+          <!-- CTA Button -->
+          <a href="#" class="btn btn-accent btn-lg btn-block mb-4">Buy Tickets Now</a>
+          
+          <!-- Additional Info -->
+          <div class="text-sm text-gray text-center">
+            <p class="mb-2">🎟️ Limited seats available</p>
+            <p class="mb-0">📍 Tickets are non-refundable</p>
+          </div>
+          
+          <!-- Social Share -->
+          <div class="pill-divider">
+            <p class="text-sm font-semibold text-center mb-3">Share This Show</p>
+            <div class="flex gap-2 justify-center">
+              <a href="#" class="btn btn-ghost btn-sm" style="padding: var(--space-2);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="#" class="btn btn-ghost btn-sm" style="padding: var(--space-2);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </a>
+              <a href="#" class="btn btn-ghost btn-sm" style="padding: var(--space-2);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER EXAMPLE (PLAYFUL TE STYLE)
+     ============================================ -->
+
+<footer class="py-10 bg-black text-white">
+  <div class="container">
+    <div class="grid grid-4 mb-8">
+      <div>
+        <h4 class="text-white mb-4">Venues</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: var(--space-2);"><a href="/venues/dallas" style="color: var(--gray-400);">Dallas</a></li>
+          <li style="margin-bottom: var(--space-2);"><a href="/venues/fort-worth" style="color: var(--gray-400);">Fort Worth</a></li>
+          <li style="margin-bottom: var(--space-2);"><a href="/venues/albuquerque" style="color: var(--gray-400);">Albuquerque</a></li>
+          <li style="margin-bottom: var(--space-2);"><a href="/venues/red-room" style="color: var(--gray-400);">Red Room</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white mb-4">Shows</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: var(--space-2);"><a href="/shows" style="color: var(--gray-400);">All Shows</a></li>
+          <li style="margin-bottom: var(--space-2);"><a href="/shows/upcoming" style="color: var(--gray-400);">Upcoming</a></li>
+          <li style="margin-bottom: var(--space-2);"><a href="/calendar" style="color: var(--gray-400);">Calendar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white mb-4">Info</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: var(--space-2);"><a href="/about" style="color: var(--gray-400);">About Us</a></li>
+          <li style="margin-bottom: var(--space-2);"><a href="/contact" style="color: var(--gray-400);">Contact</a></li>
+          <li style="margin-bottom: var(--space-2);"><a href="/groups" style="color: var(--gray-400);">Group Events</a></li>
+          <li style="margin-bottom: var(--space-2);"><a href="/faq" style="color: var(--gray-400);">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white mb-4">Follow Us</h4>
+        <div class="flex gap-3">
+          <a href="#" class="btn btn-ghost" style="color: white; padding: var(--space-2);">FB</a>
+          <a href="#" class="btn btn-ghost" style="color: white; padding: var(--space-2);">IG</a>
+          <a href="#" class="btn btn-ghost" style="color: white; padding: var(--space-2);">TW</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pill-divider" style="border-top: 1px solid var(--gray-800); padding-top: var(--space-6);">
+      <div class="text-center text-sm" style="color: var(--gray-400);">
+        <p class="mb-2">© 2026 Hyenas Comedy Club. All rights reserved.</p>
+        <p class="mb-0">
+          <a href="/privacy" style="color: var(--gray-400);">Privacy Policy</a> • 
+          <a href="/terms" style="color: var(--gray-400);">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     NOTES FOR WEBFLOW IMPLEMENTATION
+     ============================================ -->
+
+<!--
+1. Add this to your Webflow site's Custom Code (Site Settings > Custom Code > Head):
+
+<link rel="stylesheet" href="https://athkkr.github.io/hyenas-comedy-styles/hyenas-styles.css">
+
+2. For fonts, add to Custom Code > Head:
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+3. Apply the CSS classes directly to Webflow elements using the "Add Class" field
+
+4. For responsive grids, the .grid-auto class will automatically adjust columns
+
+5. Use combo classes for variations (e.g., "btn btn-primary btn-lg")
+
+-->

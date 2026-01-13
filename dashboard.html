@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyenas Styling Dashboard</title>
+    <!-- Using the project's design system -->
+    <link rel="stylesheet" href="src/css/hyenas-te-system.css">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            padding: 2rem;
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .dashboard-header {
+            margin-bottom: 2rem;
+            border-bottom: 4px solid #000;
+            padding-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .dashboard-title {
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .dashboard-meta {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.875rem;
+            text-align: right;
+            color: #666;
+        }
+
+        .dashboard-section {
+            background: #fff;
+            border: 2px solid #000;
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            border-left: 8px solid #FF4D00;
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Table Styles */
+        .template-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .template-table th {
+            text-align: left;
+            background: #000;
+            color: #fff;
+            padding: 1rem;
+            font-family: 'Roboto Mono', monospace;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+        }
+
+        .template-table td {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1rem;
+            vertical-align: top;
+        }
+
+        .template-table tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: #000;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+        }
+
+        .status-badge.live {
+            background: #00cc00;
+            color: #000;
+        }
+
+        .status-badge.dev {
+            background: #FF4D00;
+            color: #fff;
+        }
+
+        .path-link {
+            font-family: 'Roboto Mono', monospace;
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px dotted #999;
+        }
+
+        .path-link:hover {
+            background: #FF4D00;
+            color: #fff;
+            border-bottom: none;
+        }
+
+        .css-ref {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            color: #666;
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: block;
+            margin-top: 4px;
+        }
+
+        /* Changelog Styles */
+        .changelog-entry {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        .changelog-entry:last-child {
+            border-bottom: none;
+        }
+
+        .changelog-date {
+            font-family: 'Roboto Mono', monospace;
+            color: #FF4D00;
+            font-weight: bold;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .changelog-content h4 {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .changelog-content ul {
+            margin: 0;
+            padding-left: 1.2rem;
+            color: #444;
+        }
+
+        .changelog-content li {
+            margin-bottom: 0.25rem;
+        }
+
+        .btn-refresh {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.1s;
+        }
+
+        .btn-refresh:active {
+            transform: translateY(2px);
+        }
+
+        /* Grid for stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: #fff;
+            border: 2px solid #000;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #FF4D00;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <div class="dashboard-header">
+            <div>
+                <h1 class="dashboard-title">Hyenas Style<br>Control Center</h1>
+            </div>
+            <div class="dashboard-meta">
+                GENERATED: <span id="gen-date"></span><br>
+                VERSION: 2.1.0
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Core Templates</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Examples</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1</div>
+                <div class="stat-label">CSS System</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">v2.1</div>
+                <div class="stat-label">Current Release</div>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h2 class="section-title">Active Templates</h2>
+            <div style="overflow-x: auto;">
+                <table class="template-table">
+                    <thead>
+                        <tr>
+                            <th>Template Name</th>
+                            <th>Path</th>
+                            <th>Last Modified</th>
+                            <th>Stylesheets</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Homepage</strong><br><span class="status-badge live">Production Ready</span>
+                            </td>
+                            <td><a href="src/templates/homepage.html" class="path-link">src/templates/homepage.html</a>
+                            </td>
+                            <td>2026-01-12 16:28:01</td>
+                            <td><span class="css-ref">../css/hyenas-te-system.css</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Location Page</strong><br><span class="status-badge live">Production
+                                    Ready</span></td>
+                            <td><a href="src/templates/location-page.html"
+                                    class="path-link">src/templates/location-page.html</a></td>
+                            <td>2026-01-12 14:57:36</td>
+                            <td><span class="css-ref">../css/hyenas-te-system.css</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Menu Page</strong><br><span class="status-badge live">Production Ready</span>
+                            </td>
+                            <td><a href="src/templates/menu-page.html"
+                                    class="path-link">src/templates/menu-page.html</a>
+                            </td>
+                            <td>2026-01-12 18:05:42</td>
+                            <td><span class="css-ref">../css/hyenas-te-system.css</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Events List</strong><br><span class="status-badge live">Production Ready</span>
+                            </td>
+                            <td><a href="src/templates/events.html" class="path-link">src/templates/events.html</a></td>
+                            <td>2026-01-10 10:08:32</td>
+                            <td><span class="css-ref">../css/hyenas-te-system.css</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Event Detail</strong><br><span class="status-badge live">Production Ready</span>
+                            </td>
+                            <td><a href="src/templates/event-detail.html"
+                                    class="path-link">src/templates/event-detail.html</a></td>
+                            <td>2026-01-12 14:57:23</td>
+                            <td><span class="css-ref">../css/hyenas-te-system.css</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Component Showcase</strong><br><span class="status-badge dev">Dev Tool</span>
+                            </td>
+                            <td><a href="src/templates/component-showcase.html"
+                                    class="path-link">src/templates/component-showcase.html</a></td>
+                            <td>2026-01-12 14:57:10</td>
+                            <td><span class="css-ref">../css/hyenas-te-system.css</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h2 class="section-title">Examples & Wireframes</h2>
+            <div style="overflow-x: auto;">
+                <table class="template-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Path</th>
+                            <th>Last Modified</th>
+                            <th>Stylesheets</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Location Page Example</strong></td>
+                            <td><a href="examples/location-page.html" class="path-link">examples/location-page.html</a>
+                            </td>
+                            <td>2026-01-10 07:27:34</td>
+                            <td><span class="css-ref">../src/css/hyenas-te-system.css</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Homepage Wireframe</strong></td>
+                            <td><a href="examples/homepage-wireframe/index.html"
+                                    class="path-link">examples/homepage-wireframe/index.html</a></td>
+                            <td>2026-01-03 10:08:38</td>
+                            <td><span class="css-ref">styles.css?v=1.0.0</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Component Examples (Legacy)</strong></td>
+                            <td><a href="examples/component-examples.html"
+                                    class="path-link">examples/component-examples.html</a></td>
+                            <td>2026-01-02 16:44:22</td>
+                            <td><span class="css-ref">legacy/hyenas-styles.css</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h2 class="section-title">Mini Changelog</h2>
+
+            <div class="changelog-entry">
+                <div class="changelog-date">2026-01-10 (v2.1.0)</div>
+                <div class="changelog-content">
+                    <h4>Added</h4>
+                    <ul>
+                        <li>Dual-Venue Card Component merging Main Room and Red Room shows</li>
+                        <li>Interactive card slider for "Upcoming Shows" section</li>
+                        <li>Reduced homepage slider from 4 cards to 3 cards</li>
+                        <li>Navigation hints (desktop pulsing arrow, mobile swipe message)</li>
+                        <li>Comprehensive utility classes added to hyenas-te-system.css</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="changelog-entry">
+                <div class="changelog-date">2026-01-10</div>
+                <div class="changelog-content">
+                    <h4>Fixed</h4>
+                    <ul>
+                        <li>Artist name truncation limited to 2 lines</li>
+                        <li>Fixed CSS and JS file paths in location page template</li>
+                        <li>Show cards now display in proper responsive grid</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="changelog-entry">
+                <div class="changelog-date">2026-01-10</div>
+                <div class="changelog-content">
+                    <h4>Changed</h4>
+                    <ul>
+                        <li>Created Unified location page template</li>
+                        <li>Added slidercontroller.js</li>
+                        <li>Single source of truth: All pages now use /src/css/hyenas-te-system.css</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Set current date
+        const now = new Date();
+        document.getElementById('gen-date').textContent = now.toLocaleString();
+    </script>
+</body>
+
+</html>

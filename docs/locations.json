@@ -1,0 +1,96 @@
+{
+    "locations": [
+        {
+            "city": "Fort Worth",
+            "name": "Hyena's Comedy Nightclub - Fort Worth",
+            "address": "425 Commerce St, Fort Worth, TX 76102",
+            "phone": "(817) 877-5233",
+            "maps_link": "https://www.google.com/maps/dir/?api=1&destination=Hyena%27s+Comedy+Nightclub+Fort+Worth+TX",
+            "schema": {
+                "@context": "https://schema.org",
+                "@type": "ComedyClub",
+                "name": "Hyena's Comedy Nightclub - Fort Worth",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "425 Commerce St",
+                    "addressLocality": "Fort Worth",
+                    "addressRegion": "TX",
+                    "postalCode": "76102",
+                    "addressCountry": "US"
+                },
+                "telephone": "+1-817-877-5233",
+                "url": "https://www.hyenascomedynightclub.com/fort-worth",
+                "priceRange": "$$"
+            }
+        },
+        {
+            "city": "Dallas",
+            "name": "Hyena's Comedy Nightclub - Dallas",
+            "address": "5321 E Mockingbird Ln, Dallas, TX 75206",
+            "phone": "(214) 823-5233",
+            "maps_link": "https://www.google.com/maps/dir/?api=1&destination=Hyena%27s+Comedy+Nightclub+Dallas+TX",
+            "schema": {
+                "@context": "https://schema.org",
+                "@type": "ComedyClub",
+                "name": "Hyena's Comedy Nightclub - Dallas",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "5321 E Mockingbird Ln",
+                    "addressLocality": "Dallas",
+                    "addressRegion": "TX",
+                    "postalCode": "75206",
+                    "addressCountry": "US"
+                },
+                "telephone": "+1-214-823-5233",
+                "url": "https://www.hyenascomedynightclub.com/dallas",
+                "priceRange": "$$"
+            }
+        },
+        {
+            "city": "Albuquerque",
+            "name": "Hyena's Comedy Nightclub - Albuquerque",
+            "address": "2100 Louisiana Blvd NE #434, Albuquerque, NM 87110",
+            "phone": "(505) 216-6009",
+            "maps_link": "https://www.google.com/maps/dir/?api=1&destination=Hyena%27s+Comedy+Nightclub+Albuquerque+NM",
+            "schema": {
+                "@context": "https://schema.org",
+                "@type": "ComedyClub",
+                "name": "Hyena's Comedy Nightclub - Albuquerque",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "2100 Louisiana Blvd NE #434",
+                    "addressLocality": "Albuquerque",
+                    "addressRegion": "NM",
+                    "postalCode": "87110",
+                    "addressCountry": "US"
+                },
+                "telephone": "+1-505-216-6009",
+                "url": "https://www.hyenascomedynightclub.com/albuquerque",
+                "priceRange": "$$"
+            }
+        },
+        {
+            "city": "Red Room",
+            "name": "Hyena's Comedy Nightclub - Red Room",
+            "address": "425 Commerce St, Fort Worth, TX 76102",
+            "phone": "(817) 877-5233",
+            "maps_link": "https://www.google.com/maps/dir/?api=1&destination=Hyena%27s+Comedy+Nightclub+Fort+Worth+TX",
+            "schema": {
+                "@context": "https://schema.org",
+                "@type": "ComedyClub",
+                "name": "Hyena's Comedy Nightclub - Red Room",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "425 Commerce St",
+                    "addressLocality": "Fort Worth",
+                    "addressRegion": "TX",
+                    "postalCode": "76102",
+                    "addressCountry": "US"
+                },
+                "telephone": "+1-817-877-5233",
+                "url": "https://www.hyenascomedynightclub.com/hyenas-red-room",
+                "priceRange": "$$"
+            }
+        }
+    ]
+}

@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyenas Comedy Club - Dallas</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Roboto+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Design System CSS -->
+    <link rel="stylesheet" href="../src/css/hyenas-te-system.css">
+
+    <style>
+        /* ===== UTILITY CLASSES ===== */
+
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-4);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 var(--space-6);
+            }
+
+            .md\:flex {
+                display: flex;
+            }
+
+            .md\:flex-row {
+                flex-direction: row;
+            }
+
+            .md\:w-1\/2 {
+                width: 50%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 var(--space-8);
+            }
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            gap: var(--space-4);
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .grid-auto {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        @media (max-width: 1024px) {
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+
+            .grid-2,
+            .grid-3,
+            .grid-4,
+            .grid-auto {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Spacing */
+        .py-1 {
+            padding-top: var(--space-1);
+            padding-bottom: var(--space-1);
+        }
+
+        .py-3 {
+            padding-top: var(--space-3);
+            padding-bottom: var(--space-3);
+        }
+
+        .py-10 {
+            padding-top: var(--space-10);
+            padding-bottom: var(--space-10);
+        }
+
+        .py-12 {
+            padding-top: var(--space-12);
+            padding-bottom: var(--space-12);
+        }
+
+        .px-6 {
+            padding-left: var(--space-6);
+            padding-right: var(--space-6);
+        }
+
+        .p-1 {
+            padding: var(--space-1);
+        }
+
+        .p-3 {
+            padding: var(--space-3);
+        }
+
+        .p-6 {
+            padding: var(--space-6);
+        }
+
+        .pb-2 {
+            padding-bottom: var(--space-2);
+        }
+
+        .pb-4 {
+            padding-bottom: var(--space-4);
+        }
+
+        .pt-8 {
+            padding-top: var(--space-8);
+        }
+
+        .mb-1 {
+            margin-bottom: var(--space-1);
+        }
+
+        .mb-2 {
+            margin-bottom: var(--space-2);
+        }
+
+        .mb-4 {
+            margin-bottom: var(--space-4);
+        }
+
+        .mb-6 {
+            margin-bottom: var(--space-6);
+        }
+
+        .mb-8 {
+            margin-bottom: var(--space-8);
+        }
+
+        .mb-12 {
+            margin-bottom: var(--space-12);
+        }
+
+        .mt-6 {
+            margin-top: var(--space-6);
+        }
+
+        .mt-8 {
+            margin-top: var(--space-8);
+        }
+
+        /* Flex */
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .flex-1 {
+            flex: 1;
+        }
+
+        .items-start {
+            align-items: flex-start;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .items-end {
+            align-items: flex-end;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .gap-2 {
+            gap: var(--space-2);
+        }
+
+        .gap-3 {
+            gap: var(--space-3);
+        }
+
+        .gap-4 {
+            gap: var(--space-4);
+        }
+
+        .gap-6 {
+            gap: var(--space-6);
+        }
+
+        .gap-8 {
+            gap: var(--space-8);
+        }
+
+        .gap-12 {
+            gap: var(--space-12);
+        }
+
+        /* Text */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-sm {
+            font-size: var(--text-sm);
+        }
+
+        .text-xs {
+            font-size: var(--text-xs);
+        }
+
+        .text-lg {
+            font-size: var(--text-lg);
+        }
+
+        .text-xl {
+            font-size: var(--text-xl);
+        }
+
+        .text-2xl {
+            font-size: var(--text-2xl);
+        }
+
+        .text-3xl {
+            font-size: var(--text-3xl);
+        }
+
+        .text-4xl {
+            font-size: var(--text-4xl);
+        }
+
+        .text-5xl {
+            font-size: var(--text-5xl);
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .font-display {
+            font-family: var(--font-display);
+        }
+
+        .font-mono {
+            font-family: var(--font-mono);
+        }
+
+        .font-body {
+            font-family: var(--font-body);
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .font-black {
+            font-weight: 900;
+        }
+
+        .font-semibold {
+            font-weight: 600;
+        }
+
+        .leading-tight {
+            line-height: 1.1;
+        }
+
+        /* Colors */
+        .bg-white {
+            background-color: var(--te-white);
+        }
+
+        .bg-black {
+            background-color: var(--te-black);
+        }
+
+        .bg-off-white {
+            background-color: var(--te-off-white);
+        }
+
+        .bg-gray-100 {
+            background-color: var(--te-gray-light);
+        }
+
+        .bg-gray-200 {
+            background-color: var(--te-gray-light);
+        }
+
+        .text-white {
+            color: var(--te-white);
+        }
+
+        .text-black {
+            color: var(--te-black);
+        }
+
+        .text-gray {
+            color: var(--te-gray);
+        }
+
+        .text-gray-dark {
+            color: var(--te-gray-dark);
+        }
+
+        .text-gray-light {
+            color: var(--te-gray-light);
+        }
+
+        .text-orange {
+            color: var(--te-orange);
+        }
+
+        .text-blue {
+            color: var(--te-blue);
+        }
+
+        /* Borders */
+        .border {
+            border: 1px solid var(--te-black);
+        }
+
+        .border-2 {
+            border: 2px solid var(--te-black);
+        }
+
+        .border-t {
+            border-top: 1px solid var(--te-black);
+        }
+
+        .border-t-2 {
+            border-top: 2px solid var(--te-black);
+        }
+
+        .border-b {
+            border-bottom: 1px solid var(--te-black);
+        }
+
+        .border-b-2 {
+            border-bottom: 2px solid var(--te-black);
+        }
+
+        .border-black {
+            border-color: var(--te-black);
+        }
+
+        .border-white {
+            border-color: var(--te-white);
+        }
+
+        .border-gray-light {
+            border-color: var(--te-gray-light);
+        }
+
+        .border-gray-dark {
+            border-color: var(--te-gray-dark);
+        }
+
+        /* Misc */
+        .w-full {
+            width: 100%;
+        }
+
+        .w-10 {
+            width: 40px;
+        }
+
+        .h-full {
+            height: 100%;
+        }
+
+        .h-10 {
+            height: 40px;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .inset-0 {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .z-10 {
+            z-index: 10;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .aspect-square {
+            aspect-ratio: 1;
+        }
+
+        .aspect-video {
+            aspect-ratio: 16/9;
+        }
+
+        .object-cover {
+            object-fit: cover;
+        }
+
+        .grayscale {
+            filter: grayscale(100%);
+        }
+
+        .contrast-125 {
+            filter: contrast(1.25);
+        }
+
+        .opacity-0 {
+            opacity: 0;
+        }
+
+        .max-w-2xl {
+            max-width: 42rem;
+        }
+
+        .max-w-4xl {
+            max-width: 56rem;
+        }
+
+        .max-w-md {
+            max-width: 28rem;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Transitions */
+        .transition-all {
+            transition: all var(--transition-base);
+        }
+
+        .transition-opacity {
+            transition: opacity var(--transition-base);
+        }
+
+        .transition-colors {
+            transition: color var(--transition-fast), background-color var(--transition-fast);
+        }
+
+        /* Shadows */
+        .shadow-brutal {
+            box-shadow: var(--shadow-brutal);
+        }
+
+        /* Group hover effects */
+        .group:hover .group-hover\:opacity-10 {
+            opacity: 0.1;
+        }
+
+        .group:hover .group-hover\:shadow-brutal {
+            box-shadow: var(--shadow-brutal);
+        }
+
+        .group:hover .group-hover\:text-blue {
+            color: var(--te-blue);
+        }
+
+        /* Hover states */
+        .hover\:bg-orange:hover {
+            background-color: var(--te-orange);
+        }
+
+        .hover\:bg-blue:hover {
+            background-color: var(--te-blue);
+        }
+
+        .hover\:bg-white:hover {
+            background-color: var(--te-white);
+        }
+
+        .hover\:bg-black:hover {
+            background-color: var(--te-black);
+        }
+
+        .hover\:text-white:hover {
+            color: var(--te-white);
+        }
+
+        .hover\:text-black:hover {
+            color: var(--te-black);
+        }
+
+        .hover\:text-orange:hover {
+            color: var(--te-orange);
+        }
+
+        .hover\:border-orange:hover {
+            border-color: var(--te-orange);
+        }
+
+        .hover\:translate-y-\[-2px\]:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Focus states */
+        .focus\:outline-none:focus {
+            outline: none;
+        }
+
+        .focus\:border-orange:focus {
+            border-color: var(--te-orange);
+        }
+
+        /* Button classes */
+        .btn {
+            display: inline-block;
+            font-family: var(--font-mono);
+            font-size: var(--text-sm);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: var(--space-3) var(--space-6);
+            border: var(--border-thick) solid var(--te-black);
+            background: var(--te-white);
+            color: var(--te-black);
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: var(--shadow-brutal);
+        }
+
+        .btn-primary {
+            background: var(--te-black);
+            color: var(--te-white);
+            border-color: var(--te-black);
+        }
+
+        .btn-primary:hover {
+            background: var(--te-orange);
+            border-color: var(--te-orange);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid currentColor;
+        }
+
+        .btn-lg {
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--text-md);
+        }
+
+        .btn-sm {
+            padding: var(--space-2) var(--space-4);
+            font-size: var(--text-xs);
+        }
+
+        /* ===== PAGE SPECIFIC STYLES ===== */
+
+        .location-hero-bg {
+            background-image: url('img-hero.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Scanline overlay helper */
+        .location-hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 3px, 3px 100%;
+            pointer-events: none;
+        }
+
+        /* Group Show Card Custom Styles matching Spec */
+        .grouped-card {
+            border: 1px solid var(--te-black);
+            box-shadow: var(--shadow-brutal-sm);
+            transition: all var(--transition-base);
+            background: var(--te-white);
+        }
+
+        .grouped-card:hover {
+            box-shadow: var(--shadow-brutal);
+            transform: translate(-2px, -2px);
+            border-color: var(--te-orange);
+        }
+
+        .grouped-card-header {
+            background: var(--te-off-white);
+            border-bottom: 1px solid var(--te-black);
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: var(--space-2);
+        }
+
+        .location-badge {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 var(--space-4);
+            background: var(--te-red);
+            /* Dallas default */
+            color: var(--te-white);
+            font-family: var(--font-display);
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: var(--text-sm);
+        }
+
+        .grouped-content {
+            padding: var(--space-4);
+        }
+
+        .artist-name {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: var(--text-xl);
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin-bottom: var(--space-2);
+        }
+
+        .artist-credits {
+            font-family: var(--font-mono);
+            font-size: var(--text-xs);
+            color: var(--te-gray-dark);
+            border-left: 2px solid var(--te-orange);
+            padding-left: var(--space-2);
+            text-transform: uppercase;
+            margin-bottom: var(--space-4);
+        }
+
+        .showtimes-grid {
+            border-top: 2px solid var(--te-black);
+        }
+
+        .showtime-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-3) 0;
+            border-bottom: 1px dotted var(--te-gray-light);
+        }
+
+        .showtime-row:last-child {
+            border-bottom: none;
+        }
+
+        .show-date {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            font-size: var(--text-sm);
+            color: var(--te-black);
+        }
+
+        .show-times {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            font-size: 15px;
+            text-align: right;
+        }
+
+        .time-separator {
+            color: var(--te-orange);
+            margin: 0 4px;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-4);
+        }
+
+        .club-image {
+            aspect-ratio: 16/9;
+            background-color: var(--te-gray-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .club-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.2);
+            transition: filter 0.3s ease;
+        }
+
+        .club-image:hover img {
+            filter: grayscale(0%) contrast(1);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black font-body">
+
+    <!-- NAVIGATION -->
+    <nav class="te-nav">
+        <div class="te-container">
+            <div class="te-nav-inner">
+                <a href="/" class="te-logo">
+                    <img src="https://cdn.prod.website-files.com/626314d81c6e619157def12e/62634a8994907cbc6e923aa0_new-logo.png"
+                        alt="Hyenas Comedy Nightclub">
+                </a>
+
+                <button class="te-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="te-nav-menu">
+                    <li><a href="/locations/fortworth" class="te-nav-link">FORT WORTH</a></li>
+                    <li><a href="/locations/dallas" class="te-nav-link active">DALLAS</a></li>
+                    <li><a href="/locations/redroom" class="te-nav-link">RED ROOM</a></li>
+                    <li><a href="/locations/albuquerque" class="te-nav-link">ABQ</a></li>
+                    <li><a href="/shows" class="te-nav-link">SHOWS & TICKETS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO BLOCK -->
+    <section class="location-hero-bg text-white"
+        style="padding: var(--space-20) 0; position: relative; overflow: hidden;">
+        <div class="container relative z-10">
+            <div class="flex flex-col gap-4 max-w-4xl">
+                <span
+                    style="font-family: 'Roboto Mono'; font-weight: 700; size: 10px; color: var(--te-orange); text-transform: uppercase; letter-spacing: 1px;">
+                    Legendary Venue • Est. 1993
+                </span>
+                <h1
+                    style="font-family: 'Inter', sans-serif; font-weight: 900; font-size: 72px; line-height: 0.9; text-transform: uppercase; letter-spacing: -2px; text-shadow: 4px 4px 0px rgba(0,0,0,0.5);">
+                    Hyenas Dallas
+                </h1>
+                <p
+                    style="font-family: 'Roboto Mono'; font-size: 16px; color: var(--te-off-white); max-width: 600px; background: rgba(0,0,0,0.6); padding: var(--space-4);">
+                    The flagship comedy destination in the heart of Mockingbird Station. Where comedy legends are born
+                    and raised.
+                </p>
+                <div class="flex gap-4 mt-6">
+                    <button class="btn btn-primary btn-lg" style="box-shadow: var(--shadow-brutal-xl);">Get
+                        Directions</button>
+                    <button class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-black">View
+                        Calendar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO BLOCKS GRID -->
+    <section class="py-10 bg-off-white border-b-2 border-black">
+        <div class="container">
+            <div class="grid grid-3 gap-8">
+                <!-- Address/Directions -->
+                <div class="p-6 bg-white border border-black shadow-brutal">
+                    <h3 class="font-display font-black text-xl uppercase mb-4">You Here?</h3>
+                    <div class="font-mono text-sm text-gray-dark mb-4">
+                        5321 E Mockingbird Ln<br>
+                        Dallas, TX 75206<br>
+                        Mockingbird Station
+                    </div>
+                    <a href="#"
+                        class="text-blue font-bold font-mono text-xs uppercase hover:bg-blue hover:text-white inline-block p-1 transition-colors">Open
+                        in Maps -></a>
+                </div>
+
+                <!-- Contact -->
+                <div class="p-6 bg-white border border-black shadow-brutal">
+                    <h3 class="font-display font-black text-xl uppercase mb-4">Holla</h3>
+                    <div class="font-mono text-sm text-gray-dark mb-4">
+                        <div class="mb-2">Box Office: (214) 823-5233</div>
+                        <div>Events: events@hyenas.com</div>
+                    </div>
+                    <a href="tel:2148235233"
+                        class="text-orange font-bold font-mono text-xs uppercase hover:bg-orange hover:text-white inline-block p-1 transition-colors">Call
+                        Now -></a>
+                </div>
+
+                <!-- Hours -->
+                <div class="p-6 bg-white border border-black shadow-brutal">
+                    <h3 class="font-display font-black text-xl uppercase mb-4">Doors</h3>
+                    <div class="font-mono text-sm text-gray-dark mb-4">
+                        <div class="flex justify-between border-b border-gray-light py-1"><span>Thu</span> <span>7:00 PM
+                                - 11:00 PM</span></div>
+                        <div class="flex justify-between border-b border-gray-light py-1"><span>Fri</span> <span>7:00 PM
+                                - 12:00 AM</span></div>
+                        <div class="flex justify-between border-b border-gray-light py-1"><span>Sat</span> <span>6:00 PM
+                                - 12:00 AM</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GROUPED SHOW GRIDS -->
+    <section class="py-12">
+        <div class="container">
+            <div class="flex items-end justify-between mb-8 border-b-2 border-black pb-4">
+                <h2 class="font-display font-black text-4xl uppercase">Upcoming Shows</h2>
+                <a href="#" class="font-mono font-bold text-sm uppercase hover:text-orange">Full Calendar -></a>
+            </div>
+
+            <div class="grid grid-auto gap-8">
+
+                <!-- ITEM 1 -->
+                <article class="grouped-card">
+                    <div class="grouped-card-header">
+                        <div class="location-badge">Dallas</div>
+                        <div class="font-mono font-bold text-xs text-gray-dark">#HY-DAL-001</div>
+                    </div>
+                    <div class="aspect-square bg-gray-200 relative overflow-hidden group">
+                        <img src="https://placehold.co/400x400/111/FFF?text=COMIC+1" alt="Comic"
+                            class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity">
+                        </div>
+                    </div>
+                    <div class="grouped-content">
+                        <h3 class="artist-name">Ralph Barbosa</h3>
+                        <div class="artist-credits">Netflix, HBO, The Tonight Show</div>
+
+                        <div class="showtimes-grid">
+                            <div class="showtime-row">
+                                <span class="show-date">FRI JAN 24</span>
+                                <div class="show-times">
+                                    <span>7:00PM</span><span class="time-separator">&</span><span>9:30PM</span>
+                                </div>
+                            </div>
+                            <div class="showtime-row">
+                                <span class="show-date">SAT JAN 25</span>
+                                <div class="show-times">
+                                    <span>7:00PM</span><span class="time-separator">&</span><span>9:30PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"
+                        class="block w-full bg-black text-white font-mono font-bold text-xs uppercase text-center py-3 hover:bg-orange hover:translate-y-[-2px] transition-all">
+                        Get Tickets From $25
+                    </a>
+                </article>
+
+                <!-- ITEM 2 -->
+                <article class="grouped-card">
+                    <div class="grouped-card-header">
+                        <div class="location-badge">Dallas</div>
+                        <div class="font-mono font-bold text-xs text-gray-dark">#HY-DAL-002</div>
+                    </div>
+                    <div class="aspect-square bg-gray-200 relative overflow-hidden group">
+                        <img src="https://placehold.co/400x400/222/FFF?text=COMIC+2" alt="Comic"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="grouped-content">
+                        <h3 class="artist-name">Ali Siddiq</h3>
+                        <div class="artist-credits">Comedy Central, Def Jam</div>
+
+                        <div class="showtimes-grid">
+                            <div class="showtime-row">
+                                <span class="show-date">FRI FEB 10</span>
+                                <div class="show-times">
+                                    <span>8:00PM</span>
+                                </div>
+                            </div>
+                            <div class="showtime-row">
+                                <span class="show-date">SAT FEB 11</span>
+                                <div class="show-times">
+                                    <span>7:00PM</span><span class="time-separator">&</span><span>10:00PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"
+                        class="block w-full bg-black text-white font-mono font-bold text-xs uppercase text-center py-3 hover:bg-orange hover:translate-y-[-2px] transition-all">
+                        Get Tickets From $30
+                    </a>
+                </article>
+
+                <!-- ITEM 3 -->
+                <article class="grouped-card">
+                    <div class="grouped-card-header">
+                        <div class="location-badge">Dallas</div>
+                        <div class="font-mono font-bold text-xs text-gray-dark">#HY-DAL-003</div>
+                    </div>
+                    <div class="aspect-square bg-gray-200 relative overflow-hidden group">
+                        <img src="https://placehold.co/400x400/333/FFF?text=COMIC+3" alt="Comic"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="grouped-content">
+                        <h3 class="artist-name">Open Mic Night</h3>
+                        <div class="artist-credits">Local Favorites & New Blood</div>
+
+                        <div class="showtimes-grid">
+                            <div class="showtime-row">
+                                <span class="show-date">THU JAN 23</span>
+                                <div class="show-times">
+                                    <span>8:00PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"
+                        class="block w-full bg-black text-white font-mono font-bold text-xs uppercase text-center py-3 hover:bg-orange hover:translate-y-[-2px] transition-all">
+                        Free Entry
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE CLUB SECTION -->
+    <section class="py-12 bg-off-white border-t-2 border-b-2 border-black">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="mb-8 border-b-2 border-black pb-4">
+                <span class="font-mono text-orange text-xs font-bold uppercase mb-2 block">The Venue</span>
+                <h2 class="font-display font-black text-4xl uppercase">Dallas By The Numbers</h2>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-3 gap-6 mb-8">
+                <!-- Stat Card 1 -->
+                <div class="bg-white border-2 border-black p-6 shadow-brutal">
+                    <div class="font-display font-black text-5xl text-orange mb-2">400</div>
+                    <div class="font-mono text-xs uppercase text-gray-dark">Seat Capacity</div>
+                </div>
+
+                <!-- Stat Card 2 -->
+                <div class="bg-white border-2 border-black p-6 shadow-brutal">
+                    <div class="font-display font-black text-5xl text-blue mb-2">30+</div>
+                    <div class="font-mono text-xs uppercase text-gray-dark">Years Operating</div>
+                </div>
+
+                <!-- Stat Card 3 -->
+                <div class="bg-white border-2 border-black p-6 shadow-brutal">
+                    <div class="font-display font-black text-5xl text-black mb-2">200+</div>
+                    <div class="font-mono text-xs uppercase text-gray-dark">Shows Per Year</div>
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-2 gap-6 mb-8">
+                <!-- Feature Block 1 -->
+                <div class="bg-black text-white p-6 border-2 border-black">
+                    <h3 class="font-display font-black text-xl uppercase mb-4 text-orange">Venue Features</h3>
+                    <ul class="font-mono text-sm space-y-2" style="list-style: none; padding: 0;">
+                        <li class="flex items-center gap-2">
+                            <span class="text-orange">▸</span> Full Bar & Kitchen
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-orange">▸</span> Premium Sound System
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-orange">▸</span> Tiered Seating
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-orange">▸</span> VIP Tables Available
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Achievement Block -->
+                <div class="bg-white p-6 border-2 border-black">
+                    <h3 class="font-display font-black text-xl uppercase mb-4">Legendary Lineage</h3>
+                    <div class="flex flex-col gap-2">
+                        <div class="font-mono text-xs uppercase bg-orange text-white px-3 py-2 inline-block">
+                            Est. 1993
+                        </div>
+                        <div class="font-mono text-xs uppercase bg-black text-white px-3 py-2 inline-block">
+                            Mockingbird Station
+                        </div>
+                        <div class="font-mono text-xs uppercase border-2 border-black px-3 py-2 inline-block">
+                            Netflix Tapings
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Showcase -->
+            <div class="grid grid-3 gap-4">
+                <div class="relative overflow-hidden border-2 border-black aspect-video group">
+                    <img src="https://placehold.co/400x300/222/FFF?text=Main+Room" alt="Main Room"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-80 p-2">
+                        <span class="font-mono text-xs text-white uppercase">Main Room</span>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden border-2 border-black aspect-video group">
+                    <img src="https://placehold.co/400x300/333/FFF?text=Bar+Area" alt="Bar Area"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-80 p-2">
+                        <span class="font-mono text-xs text-white uppercase">Full Bar</span>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden border-2 border-black aspect-video group">
+                    <img src="https://placehold.co/400x300/444/FFF?text=Stage+View" alt="Stage View"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-80 p-2">
+                        <span class="font-mono text-xs text-white uppercase">Stage View</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY SEE COMEDY SECTION -->
+    <section id="why-hyenas-dallas" class="py-12 bg-white border-b-2 border-black">
+        <div class="container">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-display font-black text-4xl uppercase mb-8 border-b-2 border-black pb-4">
+                    Why See Comedy at Hyena's Dallas
+                </h2>
+
+                <!-- Key Benefits Grid -->
+                <div class="grid grid-2 gap-6 mb-8">
+                    <div class="flex gap-3">
+                        <span class="text-orange font-display font-black text-2xl">→</span>
+                        <div>
+                            <h3 class="font-display font-bold text-lg uppercase mb-1">Nationally Touring Comedians</h3>
+                            <p class="font-mono text-sm text-gray-dark">Rising stars and established headliners every
+                                week</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="text-orange font-display font-black text-2xl">→</span>
+                        <div>
+                            <h3 class="font-display font-bold text-lg uppercase mb-1">Intimate Showroom</h3>
+                            <p class="font-mono text-sm text-gray-dark">Designed specifically for stand-up comedy</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="text-orange font-display font-black text-2xl">→</span>
+                        <div>
+                            <h3 class="font-display font-bold text-lg uppercase mb-1">Full Bar & Kitchen</h3>
+                            <p class="font-mono text-sm text-gray-dark">Cocktails, beer, wine, and bar-friendly food
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="text-orange font-display font-black text-2xl">→</span>
+                        <div>
+                            <h3 class="font-display font-bold text-lg uppercase mb-1">Central Dallas Location</h3>
+                            <p class="font-mono text-sm text-gray-dark">Near dining and nightlife at Mockingbird
+                                Station</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food & Drinks Callout -->
+                <div class="bg-black text-white p-6 border-2 border-black mb-8">
+                    <h3 class="font-display font-black text-xl uppercase mb-3 text-orange">Food & Drinks</h3>
+                    <p class="font-mono text-sm leading-relaxed">
+                        Enjoy a full menu of cocktails, beer, wine, and bar-friendly food during the show. From frozen
+                        margaritas and signature cocktails to shareable snacks and late-night bites, Hyena's Dallas is
+                        built for a full night out — not just the punchlines.
+                    </p>
+                </div>
+
+                <!-- Planning Your Visit -->
+                <div class="bg-off-white p-6 border-2 border-black">
+                    <h3 class="font-display font-black text-xl uppercase mb-4">Planning Your Visit</h3>
+                    <ul class="font-mono text-sm space-y-2" style="list-style: none; padding: 0;">
+                        <li class="flex gap-2">
+                            <span class="text-orange font-bold">•</span>
+                            <span><strong>Age Policy:</strong> Most shows are 18+</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-orange font-bold">•</span>
+                            <span><strong>Seating:</strong> General admission unless otherwise noted</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-orange font-bold">•</span>
+                            <span><strong>Showtimes:</strong> Typically Friday and Saturday evenings, plus select
+                                weekdays and special events</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-12 bg-off-white border-b-2 border-black" itemscope
+        itemtype="https://schema.org/FAQPage">
+        <div class="container">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="font-display font-black text-4xl uppercase mb-8 border-b-2 border-black pb-4">
+                    Frequently Asked Questions
+                </h2>
+
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white p-6 border-2 border-black" itemscope itemprop="mainEntity"
+                        itemtype="https://schema.org/Question">
+                        <h3 class="font-display font-bold text-lg uppercase mb-3" itemprop="name">
+                            Do I have to order two items?
+                        </h3>
+                        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <p class="font-mono text-sm text-gray-dark" itemprop="text">
+                                Yes! There's a two-item minimum per person—food, drinks, or a mix of both. It keeps the
+                                good times rolling!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white p-6 border-2 border-black" itemscope itemprop="mainEntity"
+                        itemtype="https://schema.org/Question">
+                        <h3 class="font-display font-bold text-lg uppercase mb-3" itemprop="name">
+                            What's the age requirement?
+                        </h3>
+                        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <p class="font-mono text-sm text-gray-dark" itemprop="text">
+                                Fort Worth & Dallas: 18+ to enter. Albuquerque: 21+ to enter. No exceptions—make sure
+                                everyone in your group meets the requirement!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white p-6 border-2 border-black" itemscope itemprop="mainEntity"
+                        itemtype="https://schema.org/Question">
+                        <h3 class="font-display font-bold text-lg uppercase mb-3" itemprop="name">
+                            Do I need an ID?
+                        </h3>
+                        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <p class="font-mono text-sm text-gray-dark" itemprop="text">
+                                Yes, every guest needs a valid ID—no matter how young or old you look.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white p-6 border-2 border-black" itemscope itemprop="mainEntity"
+                        itemtype="https://schema.org/Question">
+                        <h3 class="font-display font-bold text-lg uppercase mb-3" itemprop="name">
+                            Are ticket prices the same for every show?
+                        </h3>
+                        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <p class="font-mono text-sm text-gray-dark" itemprop="text">
+                                General admission prices apply unless it's a special event—those may have different
+                                pricing. Check before booking!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-white p-6 border-2 border-black" itemscope itemprop="mainEntity"
+                        itemtype="https://schema.org/Question">
+                        <h3 class="font-display font-bold text-lg uppercase mb-3" itemprop="name">
+                            When should I arrive?
+                        </h3>
+                        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <p class="font-mono text-sm text-gray-dark" itemprop="text">
+                                To keep your reservation and get the best seats, arrive at least 30 minutes before
+                                showtime.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="bg-white p-6 border-2 border-black" itemscope itemprop="mainEntity"
+                        itemtype="https://schema.org/Question">
+                        <h3 class="font-display font-bold text-lg uppercase mb-3" itemprop="name">
+                            How can I get free tickets?
+                        </h3>
+                        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <p class="font-mono text-sm text-gray-dark" itemprop="text">
+                                Subscribe to our newsletter, and you might just score free tickets to select shows!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Footer -->
+                <div class="mt-8 text-center p-6 bg-black text-white border-2 border-black">
+                    <p class="font-display font-bold text-lg uppercase">
+                        Got all that? Great! Now let's get ready for some laughs!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- LATEST FROM THE BLOG -->
+    <section class="py-12">
+        <div class="container">
+            <h2 class="font-display font-black text-3xl uppercase mb-8 border-b border-black pb-2">Latest News</h2>
+            <div class="grid grid-3 gap-6">
+                <a href="#" class="group block">
+                    <div
+                        class="bg-gray-200 aspect-video mb-4 border border-black group-hover:shadow-brutal transition-all">
+                        <img src="https://placehold.co/400x225/EEE/000?text=Blog+1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="font-mono text-xs text-orange font-bold uppercase mb-1">Jan 10, 2026</div>
+                    <h3 class="font-display font-bold text-lg uppercase leading-tight group-hover:text-blue">Top 5
+                        Comics to Watch in 2026</h3>
+                </a>
+                <a href="#" class="group block">
+                    <div
+                        class="bg-gray-200 aspect-video mb-4 border border-black group-hover:shadow-brutal transition-all">
+                        <img src="https://placehold.co/400x225/EEE/000?text=Blog+2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="font-mono text-xs text-orange font-bold uppercase mb-1">Jan 05, 2026</div>
+                    <h3 class="font-display font-bold text-lg uppercase leading-tight group-hover:text-blue">Mockingbird
+                        Station Expansion</h3>
+                </a>
+                <a href="#" class="group block">
+                    <div
+                        class="bg-gray-200 aspect-video mb-4 border border-black group-hover:shadow-brutal transition-all">
+                        <img src="https://placehold.co/400x225/EEE/000?text=Blog+3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="font-mono text-xs text-orange font-bold uppercase mb-1">Dec 28, 2025</div>
+                    <h3 class="font-display font-bold text-lg uppercase leading-tight group-hover:text-blue">New Menu
+                        Items Dropping Soon</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMAIL SIGNUP -->
+    <section class="py-12 bg-gray-100 border-t-2 border-black">
+        <div class="container text-center max-w-2xl mx-auto">
+            <h2 class="font-display font-black text-3xl uppercase mb-4">Don't Miss The Punchline</h2>
+            <p class="font-mono text-gray-dark mb-6">Join the list. Get presale codes, free ticket drops, and exclusive
+                news.</p>
+            <form class="flex gap-2 max-w-md mx-auto">
+                <input type="email" placeholder="YOUR@EMAIL.COM"
+                    class="flex-1 p-3 border-2 border-black font-mono focus:outline-none focus:border-orange">
+                <button type="submit"
+                    class="bg-black text-white px-6 py-3 font-mono font-bold uppercase hover:bg-orange transition-colors">Sign
+                    Up</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10 bg-black text-white">
+        <div class="container">
+            <div class="grid grid-4 mb-8">
+                <div>
+                    <h4 class="font-display font-black text-lg uppercase mb-4">Venues</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li class="mb-2"><a href="#" class="text-gray hover:text-orange font-mono text-sm">Dallas</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-gray hover:text-orange font-mono text-sm">Fort
+                                Worth</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-gray hover:text-orange font-mono text-sm">Albuquerque</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-display font-black text-lg uppercase mb-4">Social</h4>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">FB</a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">IG</a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">YT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-dark pt-8 text-center text-gray">
+                <p class="font-mono text-xs">© 2026 Hyenas Comedy Club. Built Different.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

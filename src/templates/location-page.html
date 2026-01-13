@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyenas Comedy Club - Dallas</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Roboto+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Design System CSS - SINGLE SOURCE OF TRUTH -->
+    <link rel="stylesheet" href="../css/hyenas-te-system.css">
+
+    <style>
+        /* ===== PAGE-SPECIFIC STYLES ONLY ===== */
+        /* All utility and component classes are in hyenas-te-system.css */
+
+        .location-hero-bg {
+            background-image: url('img-hero.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .location-hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 3px, 3px 100%;
+            pointer-events: none;
+        }
+
+        /* Location-specific card styles */
+        .location-badge {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 var(--space-4);
+            background: var(--te-red);
+            color: var(--te-white);
+            font-family: var(--font-display);
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: var(--text-sm);
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-4);
+        }
+
+        .club-image {
+            aspect-ratio: 16/9;
+            background-color: var(--te-gray-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .club-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.2);
+            transition: filter 0.3s ease;
+        }
+
+        .club-image:hover img {
+            filter: grayscale(0%) contrast(1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="te-nav">
+        <div class="te-nav-inner">
+            <a href="/" class="te-logo">
+                <div
+                    style="font-family: 'Inter', sans-serif; font-weight: 900; font-size: 24px; text-transform: uppercase; color: var(--te-black);">
+                    Hyenas
+                </div>
+            </a>
+
+            <ul class="te-nav-menu">
+                <li><a href="/shows" class="te-nav-link">Shows</a></li>
+                <li><a href="/fort-worth" class="te-nav-link">Fort Worth</a></li>
+                <li><a href="/dallas" class="te-nav-link active">Dallas</a></li>
+                <li><a href="/red-room" class="te-nav-link">Red Room</a></li>
+                <li><a href="/abq" class="te-nav-link">ABQ</a></li>
+                <li><a href="/about" class="te-nav-link">About</a></li>
+            </ul>
+
+            <button class="te-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="location-hero-bg" style="padding: var(--space-20) 0; position: relative; overflow: hidden;">
+        <div class="te-container relative" style="z-index: 1;">
+            <div class="te-flex te-flex-col te-gap-4 max-w-4xl">
+                <span
+                    style="font-family: 'Roboto Mono'; font-weight: 700; font-size: 10px; color: var(--te-orange); text-transform: uppercase; letter-spacing: 1px;">
+                    Legendary Venue • Est. 1993
+                </span>
+                <h1
+                    style="font-family: 'Inter', sans-serif; font-weight: 900; font-size: 72px; line-height: 0.9; text-transform: uppercase; letter-spacing: -2px; text-shadow: 4px 4px 0px rgba(0,0,0,0.5); color: white;">
+                    Hyenas Dallas
+                </h1>
+                <p
+                    style="font-family: 'Roboto Mono'; font-size: 16px; color: var(--te-off-white); max-width: 600px; background: rgba(0,0,0,0.6); padding: var(--space-4);">
+                    The flagship comedy destination in the heart of Mockingbird Station. Where comedy legends are born
+                    and raised.
+                </p>
+                <div class="te-flex te-gap-4" style="margin-top: var(--space-6);">
+                    <button class="te-btn te-btn-primary te-btn-lg" style="box-shadow: var(--shadow-brutal-xl);">Get
+                        Directions</button>
+                    <button class="te-btn te-btn-outline te-btn-lg" style="color: white; border-color: white;">View
+                        Calendar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO BLOCKS -->
+    <section
+        style="padding: var(--space-10) 0; background: var(--te-off-white); border-bottom: 2px solid var(--te-black);">
+        <div class="te-container">
+            <div class="te-grid te-grid-3 te-gap-8">
+                <!-- Address -->
+                <div
+                    style="padding: var(--space-6); background: var(--te-white); border: 1px solid var(--te-black); box-shadow: var(--shadow-brutal);">
+                    <h3 class="te-section-title" style="margin-bottom: var(--space-4);">You Here?</h3>
+                    <div
+                        style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--te-gray-dark); margin-bottom: var(--space-4);">
+                        5321 E Mockingbird Ln<br>
+                        Dallas, TX 75206<br>
+                        Mockingbird Station
+                    </div>
+                    <a href="#" class="te-btn te-btn-sm">Open in Maps →</a>
+                </div>
+
+                <!-- Contact -->
+                <div
+                    style="padding: var(--space-6); background: var(--te-white); border: 1px solid var(--te-black); box-shadow: var(--shadow-brutal);">
+                    <h3 class="te-section-title" style="margin-bottom: var(--space-4);">Holla</h3>
+                    <div
+                        style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--te-gray-dark); margin-bottom: var(--space-4);">
+                        <div style="margin-bottom: var(--space-2);">Box Office: (214) 823-5233</div>
+                        <div>Events: events@hyenas.com</div>
+                    </div>
+                    <a href="tel:2148235233" class="te-btn te-btn-sm te-btn-accent">Call Now →</a>
+                </div>
+
+                <!-- Hours -->
+                <div
+                    style="padding: var(--space-6); background: var(--te-white); border: 1px solid var(--te-black); box-shadow: var(--shadow-brutal);">
+                    <h3 class="te-section-title" style="margin-bottom: var(--space-4);">Doors</h3>
+                    <div
+                        style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--te-gray-dark); margin-bottom: var(--space-4);">
+                        <div class="te-flex te-justify-between"
+                            style="border-bottom: 1px solid var(--te-gray-light); padding: var(--space-1) 0;">
+                            <span>Thu</span> <span>7:00 PM - 11:00 PM</span>
+                        </div>
+                        <div class="te-flex te-justify-between"
+                            style="border-bottom: 1px solid var(--te-gray-light); padding: var(--space-1) 0;">
+                            <span>Fri</span> <span>7:00 PM - 12:00 AM</span>
+                        </div>
+                        <div class="te-flex te-justify-between"
+                            style="border-bottom: 1px solid var(--te-gray-light); padding: var(--space-1) 0;">
+                            <span>Sat</span> <span>6:00 PM - 12:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPCOMING SHOWS SLIDER -->
+    <section style="padding: var(--space-12) 0;">
+        <div class="te-container">
+            <div class="te-section-header">
+                <h2 class="te-section-title">Upcoming Shows</h2>
+                <a href="#"
+                    style="font-family: var(--font-mono); font-weight: 700; font-size: var(--text-sm); text-transform: uppercase;">Full
+                    Calendar →</a>
+            </div>
+
+            <!-- Slider Component -->
+            <div class="te-slider">
+                <div class="te-slider-wrapper">
+                    <div class="te-slider-container">
+                        <!-- Show Card 1 -->
+                        <article class="te-card">
+                            <div class="te-card-header">
+                                <div class="location-badge">Dallas</div>
+                                <div
+                                    style="padding-right: var(--space-4); font-size: var(--text-xs); font-weight: 700; color: var(--te-gray-dark);">
+                                    #HY-DAL-001</div>
+                            </div>
+                            <div class="te-image-container">
+                                <img src="https://placehold.co/400x400/111/FFF?text=RALPH+BARBOSA" alt="Ralph Barbosa">
+                                <div class="te-overlay-scan"></div>
+                            </div>
+                            <div class="te-content">
+                                <div class="te-artist-block">
+                                    <h3 class="te-artist-name">Ralph Barbosa</h3>
+                                    <p class="te-artist-credits">Netflix, HBO, The Tonight Show</p>
+                                </div>
+                                <div class="te-schedule-grouped">
+                                    <div class="te-grouped-row">
+                                        <div class="te-date-col">
+                                            <span class="d-day">FRI</span>
+                                            <span class="d-num">JAN 24</span>
+                                        </div>
+                                        <div class="te-times-col">
+                                            <span class="te-time-pill">7:00PM</span>
+                                            <span class="te-time-pill">9:30PM</span>
+                                        </div>
+                                    </div>
+                                    <div class="te-grouped-row">
+                                        <div class="te-date-col">
+                                            <span class="d-day">SAT</span>
+                                            <span class="d-num">JAN 25</span>
+                                        </div>
+                                        <div class="te-times-col">
+                                            <span class="te-time-pill">7:00PM</span>
+                                            <span class="te-time-pill">9:30PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="te-main-cta">Get Tickets From $25</a>
+                        </article>
+
+                        <!-- Show Card 2 -->
+                        <article class="te-card">
+                            <div class="te-card-header">
+                                <div class="location-badge">Dallas</div>
+                                <div
+                                    style="padding-right: var(--space-4); font-size: var(--text-xs); font-weight: 700; color: var(--te-gray-dark);">
+                                    #HY-DAL-002</div>
+                            </div>
+                            <div class="te-image-container">
+                                <img src="https://placehold.co/400x400/222/FFF?text=ALI+SIDDIQ" alt="Ali Siddiq">
+                                <div class="te-overlay-scan"></div>
+                            </div>
+                            <div class="te-content">
+                                <div class="te-artist-block">
+                                    <h3 class="te-artist-name">Ali Siddiq</h3>
+                                    <p class="te-artist-credits">Comedy Central, Def Jam</p>
+                                </div>
+                                <div class="te-schedule-grouped">
+                                    <div class="te-grouped-row">
+                                        <div class="te-date-col">
+                                            <span class="d-day">FRI</span>
+                                            <span class="d-num">FEB 10</span>
+                                        </div>
+                                        <div class="te-times-col">
+                                            <span class="te-time-pill">8:00PM</span>
+                                        </div>
+                                    </div>
+                                    <div class="te-grouped-row">
+                                        <div class="te-date-col">
+                                            <span class="d-day">SAT</span>
+                                            <span class="d-num">FEB 11</span>
+                                        </div>
+                                        <div class="te-times-col">
+                                            <span class="te-time-pill">7:00PM</span>
+                                            <span class="te-time-pill">10:00PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="te-main-cta">Get Tickets From $30</a>
+                        </article>
+
+                        <!-- Show Card 3 -->
+                        <article class="te-card">
+                            <div class="te-card-header">
+                                <div class="location-badge">Dallas</div>
+                                <div
+                                    style="padding-right: var(--space-4); font-size: var(--text-xs); font-weight: 700; color: var(--te-gray-dark);">
+                                    #HY-DAL-003</div>
+                            </div>
+                            <div class="te-image-container">
+                                <img src="https://placehold.co/400x400/333/FFF?text=OPEN+MIC" alt="Open Mic Night">
+                                <div class="te-overlay-scan"></div>
+                            </div>
+                            <div class="te-content">
+                                <div class="te-artist-block">
+                                    <h3 class="te-artist-name">Open Mic Night</h3>
+                                    <p class="te-artist-credits">Local Favorites & New Blood</p>
+                                </div>
+                                <div class="te-schedule-grouped">
+                                    <div class="te-grouped-row">
+                                        <div class="te-date-col">
+                                            <span class="d-day">THU</span>
+                                            <span class="d-num">JAN 23</span>
+                                        </div>
+                                        <div class="te-times-col">
+                                            <span class="te-time-pill">8:00PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="te-main-cta">Free Entry</a>
+                        </article>
+
+                        <!-- Show Card 4 -->
+                        <article class="te-card">
+                            <div class="te-card-header">
+                                <div class="location-badge">Dallas</div>
+                                <div
+                                    style="padding-right: var(--space-4); font-size: var(--text-xs); font-weight: 700; color: var(--te-gray-dark);">
+                                    #HY-DAL-004</div>
+                            </div>
+                            <div class="te-image-container">
+                                <img src="https://placehold.co/400x400/444/FFF?text=MARK+NORMAND" alt="Mark Normand">
+                                <div class="te-overlay-scan"></div>
+                            </div>
+                            <div class="te-content">
+                                <div class="te-artist-block">
+                                    <h3 class="te-artist-name">Mark Normand</h3>
+                                    <p class="te-artist-credits">Netflix Special, Conan</p>
+                                </div>
+                                <div class="te-schedule-grouped">
+                                    <div class="te-grouped-row">
+                                        <div class="te-date-col">
+                                            <span class="d-day">SAT</span>
+                                            <span class="d-num">FEB 15</span>
+                                        </div>
+                                        <div class="te-times-col">
+                                            <span class="te-time-pill">7:30PM</span>
+                                            <span class="te-time-pill">10:00PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="te-main-cta">Get Tickets From $35</a>
+                        </article>
+
+                        <!-- Show Card 5 -->
+                        <article class="te-card">
+                            <div class="te-card-header">
+                                <div class="location-badge">Dallas</div>
+                                <div
+                                    style="padding-right: var(--space-4); font-size: var(--text-xs); font-weight: 700; color: var(--te-gray-dark);">
+                                    #HY-DAL-005</div>
+                            </div>
+                            <div class="te-image-container">
+                                <img src="https://placehold.co/400x400/555/FFF?text=SHANE+GILLIS" alt="Shane Gillis">
+                                <div class="te-overlay-scan"></div>
+                            </div>
+                            <div class="te-content">
+                                <div class="te-artist-block">
+                                    <h3 class="te-artist-name">Shane Gillis</h3>
+                                    <p class="te-artist-credits">SNL, Netflix, Sold Out Tours</p>
+                                </div>
+                                <div class="te-schedule-grouped">
+                                    <div class="te-grouped-row">
+                                        <div class="te-date-col">
+                                            <span class="d-day">FRI</span>
+                                            <span class="d-num">FEB 21</span>
+                                        </div>
+                                        <div class="te-times-col">
+                                            <span class="te-time-pill">7:00PM</span>
+                                            <span class="te-time-pill">9:45PM</span>
+                                        </div>
+                                    </div>
+                                    <div class="te-grouped-row">
+                                        <div class="te-date-col">
+                                            <span class="d-day">SAT</span>
+                                            <span class="d-num">FEB 22</span>
+                                        </div>
+                                        <div class="te-times-col">
+                                            <span class="te-time-pill">7:00PM</span>
+                                            <span class="te-time-pill">9:45PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="te-main-cta">Get Tickets From $45</a>
+                        </article>
+
+                        <!-- Show Card 6 -->
+                        <article class="te-card">
+                            <div class="te-card-header">
+                                <div class="location-badge">Dallas</div>
+                                <div
+                                    style="padding-right: var(--space-4); font-size: var(--text-xs); font-weight: 700; color: var(--te-gray-dark);">
+                                    #HY-DAL-006</div>
+                            </div>
+                            <div class="te-image-container">
+                                <img src="https://placehold.co/400x400/666/FFF?text=NATE+BARGATZE" alt="Nate Bargatze">
+                                <div class="te-overlay-scan"></div>
+                            </div>
+                            <div class="te-content">
+                                <div class="te-artist-block">
+                                    <h3 class="te-artist-name">Nate Bargatze</h3>
+                                    <p class="te-artist-credits">Netflix, SNL Host, Arena Tours</p>
+                                </div>
+                                <div class="te-schedule-grouped">
+                                    <div class="te-grouped-row">
+                                        <div class="te-date-col">
+                                            <span class="d-day">THU</span>
+                                            <span class="d-num">MAR 5</span>
+                                        </div>
+                                        <div class="te-times-col">
+                                            <span class="te-time-pill">8:00PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="te-main-cta">Get Tickets From $50</a>
+                        </article>
+
+                        <!-- Show Card 7 -->
+                        <article class="te-card">
+                            <div class="te-card-header">
+                                <div class="location-badge">Dallas</div>
+                                <div
+                                    style="padding-right: var(--space-4); font-size: var(--text-xs); font-weight: 700; color: var(--te-gray-dark);">
+                                    #HY-DAL-007</div>
+                            </div>
+                            <div class="te-image-container">
+                                <img src="https://placehold.co/400x400/777/FFF?text=COMEDY+ROAST"
+                                    alt="Comedy Roast Battle">
+                                <div class="te-overlay-scan"></div>
+                            </div>
+                            <div class="te-content">
+                                <div class="te-artist-block">
+                                    <h3 class="te-artist-name">Roast Battle</h3>
+                                    <p class="te-artist-credits">Monthly Competition Series</p>
+                                </div>
+                                <div class="te-schedule-grouped">
+                                    <div class="te-grouped-row">
+                                        <div class="te-date-col">
+                                            <span class="d-day">SAT</span>
+                                            <span class="d-num">MAR 8</span>
+                                        </div>
+                                        <div class="te-times-col">
+                                            <span class="te-time-pill">9:00PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="te-main-cta">Get Tickets From $20</a>
+                        </article>
+
+                        <!-- Show Card 8 -->
+                        <article class="te-card">
+                            <div class="te-card-header">
+                                <div class="location-badge">Dallas</div>
+                                <div
+                                    style="padding-right: var(--space-4); font-size: var(--text-xs); font-weight: 700; color: var(--te-gray-dark);">
+                                    #HY-DAL-008</div>
+                            </div>
+                            <div class="te-image-container">
+                                <img src="https://placehold.co/400x400/888/FFF?text=IMPROV+NIGHT" alt="Improv Night">
+                                <div class="te-overlay-scan"></div>
+                            </div>
+                            <div class="te-content">
+                                <div class="te-artist-block">
+                                    <h3 class="te-artist-name">Improv Night</h3>
+                                    <p class="te-artist-credits">Dallas Comedy All-Stars</p>
+                                </div>
+                                <div class="te-schedule-grouped">
+                                    <div class="te-grouped-row">
+                                        <div class="te-date-col">
+                                            <span class="d-day">WED</span>
+                                            <span class="d-num">MAR 12</span>
+                                        </div>
+                                        <div class="te-times-col">
+                                            <span class="te-time-pill">8:30PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="te-main-cta">Get Tickets From $15</a>
+                        </article>
+
+                        <!-- Show Card 9 -->
+                        <article class="te-card">
+                            <div class="te-card-header">
+                                <div class="location-badge">Dallas</div>
+                                <div
+                                    style="padding-right: var(--space-4); font-size: var(--text-xs); font-weight: 700; color: var(--te-gray-dark);">
+                                    #HY-DAL-009</div>
+                            </div>
+                            <div class="te-image-container">
+                                <img src="https://placehold.co/400x400/999/FFF?text=TOM+SEGURA" alt="Tom Segura">
+                                <div class="te-overlay-scan"></div>
+                            </div>
+                            <div class="te-content">
+                                <div class="te-artist-block">
+                                    <h3 class="te-artist-name">Tom Segura</h3>
+                                    <p class="te-artist-credits">Netflix Specials, Podcaster</p>
+                                </div>
+                                <div class="te-schedule-grouped">
+                                    <div class="te-grouped-row">
+                                        <div class="te-date-col">
+                                            <span class="d-day">FRI</span>
+                                            <span class="d-num">MAR 21</span>
+                                        </div>
+                                        <div class="te-times-col">
+                                            <span class="te-time-pill">7:00PM</span>
+                                            <span class="te-time-pill">10:00PM</span>
+                                        </div>
+                                    </div>
+                                    <div class="te-grouped-row">
+                                        <div class="te-date-col">
+                                            <span class="d-day">SAT</span>
+                                            <span class="d-num">MAR 22</span>
+                                        </div>
+                                        <div class="te-times-col">
+                                            <span class="te-time-pill">7:00PM</span>
+                                            <span class="te-time-pill">10:00PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="te-main-cta">Get Tickets From $55</a>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls (Desktop) -->
+                <div class="te-slider-nav">
+                    <button class="te-slider-btn te-slider-prev" aria-label="Previous shows">←</button>
+                    <button class="te-slider-btn te-slider-next" aria-label="Next shows">→</button>
+                </div>
+
+                <!-- Dots Navigation (Mobile) -->
+                <div class="te-slider-dots" aria-label="Slide navigation"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE CLUB SECTION -->
+    <section class="te-section" style="background: var(--te-black); color: var(--te-white);">
+        <div class="te-container">
+            <div class="te-flex te-flex-col te-gap-12 te-items-center" style="margin-bottom: var(--space-12);">
+                <div style="width: 100%; max-width: 600px;">
+                    <span
+                        style="font-family: var(--font-mono); color: var(--te-orange); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; margin-bottom: var(--space-2); display: block;">The
+                        Experience</span>
+                    <h2
+                        style="font-family: var(--font-display); font-weight: 900; font-size: var(--text-5xl); text-transform: uppercase; margin-bottom: var(--space-6);">
+                        Loud. Live. <br>Unfiltered.</h2>
+                    <p
+                        style="font-family: var(--font-mono); color: var(--te-gray-light); margin-bottom: var(--space-6);">
+                        Hyenas isn't just a club. It's an institution. We've stripped away the pretension to focus on
+                        what matters: raw, unfiltered comedy in an atmosphere that demands your attention.
+                    </p>
+                    <a href="#" class="te-btn te-btn-outline" style="border-color: white; color: white;">Watch The
+                        Trailer</a>
+                </div>
+                <div style="width: 100%; max-width: 600px;">
+                    <div style="border: 2px solid white; padding: 4px; box-shadow: 8px 8px 0px var(--te-gray-dark);">
+                        <img src="https://placehold.co/600x400/111/FFF?text=Inside+The+Club" alt="Club Interior"
+                            class="w-full grayscale contrast-125">
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-grid">
+                <div class="club-image">
+                    <img src="https://placehold.co/400x300/222/FFF?text=Bar" alt="The Bar">
+                </div>
+                <div class="club-image">
+                    <img src="https://placehold.co/400x300/333/FFF?text=Crowd" alt="The Crowd">
+                </div>
+                <div class="club-image">
+                    <img src="https://placehold.co/400x300/444/FFF?text=Stage" alt="The Stage">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMAIL SIGNUP -->
+    <section
+        style="padding: var(--space-12) 0; background: var(--te-gray-light); border-top: 2px solid var(--te-black);">
+        <div class="te-container" style="text-align: center; max-width: 42rem; margin: 0 auto;">
+            <h2
+                style="font-family: var(--font-display); font-weight: 900; font-size: var(--text-3xl); text-transform: uppercase; margin-bottom: var(--space-4);">
+                Don't Miss The Punchline</h2>
+            <p style="font-family: var(--font-mono); color: var(--te-gray-dark); margin-bottom: var(--space-6);">Join
+                the list. Get presale codes, free ticket drops, and exclusive news.</p>
+            <form class="te-flex te-gap-2 max-w-md mx-auto">
+                <input type="email" placeholder="YOUR@EMAIL.COM"
+                    style="flex: 1; padding: var(--space-3); border: 2px solid var(--te-black); font-family: var(--font-mono);">
+                <button type="submit" class="te-btn te-btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="te-footer">
+        <div class="te-container">
+            <div class="te-footer-grid">
+                <div class="te-footer-col">
+                    <h4>HYENAS</h4>
+                    <p
+                        style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--te-gray-light); line-height: 1.6;">
+                        The premier comedy club experience in Texas and New Mexico since 1989.
+                    </p>
+                </div>
+                <div class="te-footer-col">
+                    <h4>LOCATIONS</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="/locations/dallas">Dallas</a></li>
+                        <li><a href="/locations/fortworth">Fort Worth</a></li>
+                        <li><a href="/locations/albuquerque">Albuquerque</a></li>
+                        <li><a href="/locations/redroom">Red Room</a></li>
+                    </ul>
+                </div>
+                <div class="te-footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="/shows">Upcoming Shows</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/private-events">Private Events</a></li>
+                    </ul>
+                </div>
+                <div class="te-footer-col">
+                    <h4>CONNECT</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="https://facebook.com/hyenascomedy">Facebook</a></li>
+                        <li><a href="https://instagram.com/hyenascomedy">Instagram</a></li>
+                        <li><a href="https://twitter.com/hyenascomedy">Twitter</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="te-footer-bottom">
+                <div>© 2026 HYENAS COMEDY NIGHTCLUB. ALL RIGHTS RESERVED.</div>
+                <div>
+                    <a href="/privacy" style="margin-right: var(--space-4);">PRIVACY POLICY</a>
+                    <a href="/terms">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/navigation.js"></script>
+    <script src="../js/slider.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyenas TE Design System - Component Showcase</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Roboto+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="../css/hyenas-te-system.css">
+
+    <style>
+        .showcase-section {
+            padding: var(--space-12) 0;
+            border-bottom: 2px solid var(--te-black);
+        }
+
+        .showcase-header {
+            margin-bottom: var(--space-8);
+        }
+
+        .showcase-title {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: var(--text-2xl);
+            text-transform: uppercase;
+            margin-bottom: var(--space-2);
+        }
+
+        .showcase-desc {
+            font-family: var(--font-mono);
+            font-size: var(--text-sm);
+            color: var(--te-gray-dark);
+        }
+
+        .component-demo {
+            background: var(--te-white);
+            border: 1px solid var(--te-black);
+            padding: var(--space-6);
+            margin-bottom: var(--space-6);
+        }
+
+        .code-block {
+            background: var(--te-black);
+            color: var(--te-white);
+            padding: var(--space-4);
+            font-family: var(--font-mono);
+            font-size: var(--text-xs);
+            overflow-x: auto;
+            margin-top: var(--space-4);
+        }
+
+        .color-swatch {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 2px solid var(--te-black);
+            margin-right: var(--space-4);
+            margin-bottom: var(--space-4);
+        }
+
+        .color-label {
+            font-family: var(--font-mono);
+            font-size: var(--text-xs);
+            margin-top: var(--space-2);
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header style="background: var(--te-black); color: var(--te-white); padding: var(--space-8) 0;">
+        <div class="te-container">
+            <div
+                style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--te-orange); margin-bottom: var(--space-2);">
+                DESIGN_SYSTEM_V2.0</div>
+            <h1
+                style="font-family: var(--font-display); font-weight: 900; font-size: var(--text-4xl); text-transform: uppercase; letter-spacing: -2px; margin: 0;">
+                COMPONENT SHOWCASE
+            </h1>
+            <p
+                style="font-family: var(--font-mono); font-size: var(--text-md); color: var(--te-gray-light); margin-top: var(--space-4);">
+                Complete visual reference for the Hyenas TE Design System
+            </p>
+        </div>
+    </header>
+
+    <!-- Color Palette -->
+    <section class="showcase-section">
+        <div class="te-container">
+            <div class="showcase-header">
+                <h2 class="showcase-title">01. Color Palette</h2>
+                <p class="showcase-desc">Base colors and location-specific accents</p>
+            </div>
+
+            <div class="component-demo">
+                <h3 style="font-family: var(--font-mono); font-size: var(--text-sm); margin-bottom: var(--space-4);">
+                    BASE COLORS</h3>
+                <div>
+                    <div class="color-swatch" style="background: #000000;"></div>
+                    <span class="color-label">BLACK<br>#000000</span>
+
+                    <div class="color-swatch" style="background: #FFFFFF; border: 2px solid #000;"></div>
+                    <span class="color-label">WHITE<br>#FFFFFF</span>
+
+                    <div class="color-swatch" style="background: #F4F4F4;"></div>
+                    <span class="color-label">OFF-WHITE<br>#F4F4F4</span>
+
+                    <div class="color-swatch" style="background: #E0E0E0;"></div>
+                    <span class="color-label">GRAY LIGHT<br>#E0E0E0</span>
+                </div>
+
+                <h3
+                    style="font-family: var(--font-mono); font-size: var(--text-sm); margin: var(--space-8) 0 var(--space-4) 0;">
+                    ACCENT COLORS</h3>
+                <div>
+                    <div class="color-swatch" style="background: #FF4D00;"></div>
+                    <span class="color-label">ORANGE<br>#FF4D00</span>
+
+                    <div class="color-swatch" style="background: #0044FF;"></div>
+                    <span class="color-label">BLUE<br>#0044FF</span>
+
+                    <div class="color-swatch" style="background: #FF0000;"></div>
+                    <span class="color-label">RED<br>#FF0000</span>
+
+                    <div class="color-swatch" style="background: #00AA00;"></div>
+                    <span class="color-label">GREEN<br>#00AA00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="showcase-section">
+        <div class="te-container">
+            <div class="showcase-header">
+                <h2 class="showcase-title">02. Navigation</h2>
+                <p class="showcase-desc">Sticky header with mobile hamburger menu</p>
+            </div>
+
+            <div class="component-demo" style="padding: 0; overflow: hidden;">
+                <nav class="te-nav" style="position: relative;">
+                    <div class="te-container">
+                        <div class="te-nav-inner">
+                            <a href="#" class="te-logo">
+                                <img src="https://cdn.prod.website-files.com/626314d81c6e619157def12e/62634a8994907cbc6e923aa0_new-logo.png"
+                                    alt="Hyenas Comedy Nightclub" style="height: 50px; width: auto; display: block;">
+                            </a>
+
+                            <button class="te-menu-toggle" aria-label="Toggle menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+
+                            <ul class="te-nav-menu">
+                                <li><a href="#" class="te-nav-link">FORT WORTH</a></li>
+                                <li><a href="#" class="te-nav-link">DALLAS</a></li>
+                                <li><a href="#" class="te-nav-link">RED ROOM</a></li>
+                                <li><a href="#" class="te-nav-link">ABQ</a></li>
+                                <li><a href="#" class="te-nav-link active">SHOWS & TICKETS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div
+                    style="padding: var(--space-4); background: var(--te-off-white); font-family: var(--font-mono); font-size: var(--text-xs);">
+                    <p style="margin-bottom: var(--space-2);"><strong>FEATURES:</strong></p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>• Sticky positioning (top: 0)</li>
+                        <li>• Height: 70px</li>
+                        <li>• Mobile hamburger menu (< 768px)</li>
+                        <li>• Active link indicator (orange underline)</li>
+                        <li>• Smooth transitions</li>
+                        <li>• Shadow on scroll</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography -->
+    <section class="showcase-section">
+        <div class="te-container">
+            <div class="showcase-header">
+                <h2 class="showcase-title">03. Typography</h2>
+                <p class="showcase-desc">Inter for display, Roboto Mono for technical elements</p>
+            </div>
+
+            <div class="component-demo">
+                <div
+                    style="font-family: var(--font-display); font-weight: 900; font-size: var(--text-4xl); margin-bottom: var(--space-4);">
+                    HERO TITLE (56px)
+                </div>
+                <div
+                    style="font-family: var(--font-display); font-weight: 900; font-size: var(--text-2xl); margin-bottom: var(--space-4);">
+                    SECTION TITLE (32px)
+                </div>
+                <div
+                    style="font-family: var(--font-display); font-weight: 900; font-size: var(--text-xl); margin-bottom: var(--space-4);">
+                    CARD TITLE (24px)
+                </div>
+                <div style="font-family: var(--font-mono); font-size: var(--text-base); margin-bottom: var(--space-4);">
+                    Body text using Roboto Mono (14px) - Technical, monospaced font for readability
+                </div>
+                <div style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--te-gray-dark);">
+                    SMALL CAPS LABEL (10px) - FOR METADATA AND TAGS
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="showcase-section">
+        <div class="te-container">
+            <div class="showcase-header">
+                <h2 class="showcase-title">04. Buttons</h2>
+                <p class="showcase-desc">Multiple variants and sizes</p>
+            </div>
+
+            <div class="component-demo">
+                <h3 style="font-family: var(--font-mono); font-size: var(--text-sm); margin-bottom: var(--space-4);">
+                    VARIANTS</h3>
+                <div style="display: flex; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-6);">
+                    <button class="te-btn te-btn-primary">PRIMARY BUTTON</button>
+                    <button class="te-btn te-btn-accent">ACCENT BUTTON</button>
+                    <button class="te-btn te-btn-outline"
+                        style="background: var(--te-black); color: var(--te-white); border-color: var(--te-white);">OUTLINE
+                        BUTTON</button>
+                    <button class="te-btn">DEFAULT BUTTON</button>
+                </div>
+
+                <h3 style="font-family: var(--font-mono); font-size: var(--text-sm); margin-bottom: var(--space-4);">
+                    SIZES</h3>
+                <div
+                    style="display: flex; gap: var(--space-4); flex-wrap: wrap; align-items: center; margin-bottom: var(--space-6);">
+                    <button class="te-btn te-btn-primary te-btn-sm">SMALL</button>
+                    <button class="te-btn te-btn-primary">DEFAULT</button>
+                    <button class="te-btn te-btn-primary te-btn-lg">LARGE</button>
+                </div>
+
+                <h3 style="font-family: var(--font-mono); font-size: var(--text-sm); margin-bottom: var(--space-4);">
+                    FULL WIDTH</h3>
+                <button class="te-btn te-btn-primary te-btn-block">FULL WIDTH BUTTON</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Badges -->
+    <section class="showcase-section">
+        <div class="te-container">
+            <div class="showcase-header">
+                <h2 class="showcase-title">05. Location Badges</h2>
+                <p class="showcase-desc">Color-coded venue identifiers</p>
+            </div>
+
+            <div class="component-demo">
+                <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+                    <div class="te-location-badge fort-worth" style="padding: var(--space-3) var(--space-4);">
+                        <span class="loc-id">FW-TX</span>
+                        <span class="loc-name">FORT WORTH</span>
+                    </div>
+
+                    <div class="te-location-badge dallas" style="padding: var(--space-3) var(--space-4);">
+                        <span class="loc-id">DAL-TX</span>
+                        <span class="loc-name">DALLAS</span>
+                    </div>
+
+                    <div class="te-location-badge albuquerque" style="padding: var(--space-3) var(--space-4);">
+                        <span class="loc-id">ABQ-NM</span>
+                        <span class="loc-name">ALBUQUERQUE</span>
+                    </div>
+
+                    <div class="te-location-badge red-room" style="padding: var(--space-3) var(--space-4);">
+                        <span class="loc-id">FW-RR</span>
+                        <span class="loc-name">RED ROOM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Show Card -->
+    <section class="showcase-section">
+        <div class="te-container">
+            <div class="showcase-header">
+                <h2 class="showcase-title">06. Show Card (Grouped Variant)</h2>
+                <p class="showcase-desc">Main component for displaying shows with grouped showtimes</p>
+            </div>
+
+            <div style="max-width: 400px;">
+                <article class="te-card">
+                    <div class="te-card-header">
+                        <div class="te-location-badge fort-worth">
+                            <span class="loc-id">FW-TX</span>
+                            <span class="loc-name">FORT WORTH</span>
+                        </div>
+                        <div class="te-ui-dots">UPCOMING</div>
+                    </div>
+
+                    <a href="#" class="te-image-container">
+                        <img src="https://d1yf68t7nbxlyn.cloudfront.net/image/id/-2853111880148553046"
+                            alt="Example Comedian">
+                        <div class="te-overlay-scan"></div>
+                    </a>
+
+                    <div class="te-content">
+                        <div class="te-artist-block">
+                            <h3 class="te-artist-name">COMEDIAN NAME</h3>
+                            <p class="te-artist-credits">CREDITS / SHOWS / ACCOLADES</p>
+                        </div>
+
+                        <div class="te-schedule-grouped">
+                            <div class="te-grouped-row">
+                                <div class="te-date-col">
+                                    <span class="d-day">FRI</span>
+                                    <span class="d-num">JAN 10</span>
+                                </div>
+                                <div class="te-times-col">
+                                    <span class="te-time-pill">8:00PM</span>
+                                    <span class="te-time-pill">10:00PM</span>
+                                </div>
+                            </div>
+                            <div class="te-grouped-row">
+                                <div class="te-date-col">
+                                    <span class="d-day">SAT</span>
+                                    <span class="d-num">JAN 11</span>
+                                </div>
+                                <div class="te-times-col">
+                                    <span class="te-time-pill">7:00PM</span>
+                                    <span class="te-time-pill">9:30PM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="te-main-cta">GET TICKETS</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="showcase-section">
+        <div class="te-container">
+            <div class="showcase-header">
+                <h2 class="showcase-title">07. Filter Bar</h2>
+                <p class="showcase-desc">Location and date filtering controls</p>
+            </div>
+
+            <div class="te-filter-bar">
+                <div class="te-filter-group">
+                    <span class="te-filter-label">LOCATION:</span>
+                    <button class="te-filter-btn active">ALL</button>
+                    <button class="te-filter-btn">DALLAS</button>
+                    <button class="te-filter-btn">FORT WORTH</button>
+                    <button class="te-filter-btn">ALBUQUERQUE</button>
+                </div>
+
+                <div class="te-filter-group">
+                    <span class="te-filter-label">DATE:</span>
+                    <button class="te-filter-btn active">ALL</button>
+                    <button class="te-filter-btn">THIS WEEK</button>
+                    <button class="te-filter-btn">THIS MONTH</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid System -->
+    <section class="showcase-section">
+        <div class="te-container">
+            <div class="showcase-header">
+                <h2 class="showcase-title">08. Grid System</h2>
+                <p class="showcase-desc">Responsive grid layouts</p>
+            </div>
+
+            <div class="component-demo">
+                <h3 style="font-family: var(--font-mono); font-size: var(--text-sm); margin-bottom: var(--space-4);">4
+                    COLUMN GRID (RESPONSIVE)</h3>
+                <div class="te-grid te-grid-4" style="margin-bottom: var(--space-6);">
+                    <div
+                        style="background: var(--te-off-white); border: 1px solid var(--te-black); padding: var(--space-4); text-align: center;">
+                        COL 1</div>
+                    <div
+                        style="background: var(--te-off-white); border: 1px solid var(--te-black); padding: var(--space-4); text-align: center;">
+                        COL 2</div>
+                    <div
+                        style="background: var(--te-off-white); border: 1px solid var(--te-black); padding: var(--space-4); text-align: center;">
+                        COL 3</div>
+                    <div
+                        style="background: var(--te-off-white); border: 1px solid var(--te-black); padding: var(--space-4); text-align: center;">
+                        COL 4</div>
+                </div>
+
+                <h3 style="font-family: var(--font-mono); font-size: var(--text-sm); margin-bottom: var(--space-4);">3
+                    COLUMN GRID (RESPONSIVE)</h3>
+                <div class="te-grid te-grid-3">
+                    <div
+                        style="background: var(--te-off-white); border: 1px solid var(--te-black); padding: var(--space-4); text-align: center;">
+                        COL 1</div>
+                    <div
+                        style="background: var(--te-off-white); border: 1px solid var(--te-black); padding: var(--space-4); text-align: center;">
+                        COL 2</div>
+                    <div
+                        style="background: var(--te-off-white); border: 1px solid var(--te-black); padding: var(--space-4); text-align: center;">
+                        COL 3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spacing -->
+    <section class="showcase-section">
+        <div class="te-container">
+            <div class="showcase-header">
+                <h2 class="showcase-title">09. Spacing System</h2>
+                <p class="showcase-desc">8px grid system</p>
+            </div>
+
+            <div class="component-demo">
+                <div style="font-family: var(--font-mono); font-size: var(--text-xs); line-height: 2;">
+                    <div>--space-1: 4px</div>
+                    <div>--space-2: 8px</div>
+                    <div>--space-3: 12px</div>
+                    <div>--space-4: 16px</div>
+                    <div>--space-6: 24px</div>
+                    <div>--space-8: 32px</div>
+                    <div>--space-12: 48px</div>
+                    <div>--space-16: 64px</div>
+                    <div>--space-20: 80px</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="te-footer">
+        <div class="te-container">
+            <div class="te-footer-grid">
+                <div class="te-footer-col">
+                    <h4>HYENAS</h4>
+                    <p
+                        style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--te-gray-light); line-height: 1.6;">
+                        The premier comedy club experience in Texas and New Mexico since 1989.
+                    </p>
+                </div>
+                <div class="te-footer-col">
+                    <h4>LOCATIONS</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="/locations/dallas">Dallas</a></li>
+                        <li><a href="/locations/fortworth">Fort Worth</a></li>
+                        <li><a href="/locations/albuquerque">Albuquerque</a></li>
+                        <li><a href="/locations/redroom">Red Room</a></li>
+                    </ul>
+                </div>
+                <div class="te-footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="/shows">Upcoming Shows</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/private-events">Private Events</a></li>
+                    </ul>
+                </div>
+                <div class="te-footer-col">
+                    <h4>CONNECT</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="https://facebook.com/hyenascomedy">Facebook</a></li>
+                        <li><a href="https://instagram.com/hyenascomedy">Instagram</a></li>
+                        <li><a href="https://twitter.com/hyenascomedy">Twitter</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="te-footer-bottom">
+                <div>© 2026 HYENAS COMEDY NIGHTCLUB. ALL RIGHTS RESERVED.</div>
+                <div>
+                    <a href="/privacy" style="margin-right: var(--space-4);">PRIVACY POLICY</a>
+                    <a href="/terms">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactive navigation demo -->
+    <script src="../js/navigation.js"></script>
+
+</body>
+
+</html>

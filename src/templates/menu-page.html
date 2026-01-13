@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Hyena's Comedy Nightclub</title>
+    <meta name="description" content="Food and Drinks Menu for Hyena's Comedy Nightclub.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Roboto+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/hyenas-te-system.css">
+</head>
+
+<body class="bg-white">
+
+    <!-- NAVIGATION -->
+    <nav class="te-nav">
+        <div class="te-container">
+            <div class="te-nav-inner">
+                <a href="/" class="te-logo">
+                    <img src="https://cdn.prod.website-files.com/626314d81c6e619157def12e/62634a8994907cbc6e923aa0_new-logo.png"
+                        alt="Hyenas Comedy Nightclub">
+                </a>
+
+                <button class="te-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="te-nav-menu">
+                    <li><a href="/locations/fortworth" class="te-nav-link">FORT WORTH</a></li>
+                    <li><a href="/locations/dallas" class="te-nav-link">DALLAS</a></li>
+                    <li><a href="/locations/redroom" class="te-nav-link">RED ROOM</a></li>
+                    <li><a href="/locations/albuquerque" class="te-nav-link">ABQ</a></li>
+                    <li><a href="/shows" class="te-nav-link">SHOWS & TICKETS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MENU HEADER -->
+    <header class="menu-page-header" data-location="all">
+        <div class="te-container">
+            <h1 class="text-4xl font-black uppercase tracking-tight mb-2">Master Menu</h1>
+            <p class="text-lg font-mono opacity-80">Full bar & kitchen open during all shows</p>
+        </div>
+    </header>
+
+    <!-- STICKY TABS -->
+    <div class="te-sticky-nav">
+        <div class="te-container">
+            <div class="te-sticky-tabs-list">
+                <a href="#food" class="te-tab-link active">Food</a>
+                <a href="#drinks" class="te-tab-link">Drinks</a>
+                <a href="#desserts" class="te-tab-link">Desserts</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MENU CONTENT -->
+    <main class="te-container pb-24" style="background: var(--te-bg-page);">
+
+        <!-- FOOD SECTION -->
+        <section id="food" class="te-menu-section">
+            <h2 class="te-menu-category-title">Food</h2>
+
+            <!-- Fort Worth Food -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-white uppercase border-b border-gray-700 pb-2">Fort Worth</h3>
+
+                <h4 class="te-menu-subcategory-title">Dinner Baskets</h4>
+                <div class="te-menu-items-grid">
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Chicken Tenders</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$15.00</span>
+                        </div>
+                        <div class="te-item-desc">Crispy Fried Tenders Served with French Fries & Honey Mustard</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Chicken Wings</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$12.00</span>
+                        </div>
+                        <div class="te-item-desc">10 Wings. Choice of Buffalo, Teriyaki, or Naked</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Hyena's Sampler</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$15.00</span>
+                        </div>
+                        <div class="te-item-desc">Wings, Mozzarella Sticks, Taquitos, & Jalapeño Poppers</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Jalapeño Poppers</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$10.00</span>
+                        </div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Taquitos</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$10.00</span>
+                        </div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">French Fries</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$7.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dallas Food -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-white uppercase border-b border-gray-700 pb-2">Dallas</h3>
+
+                <h4 class="te-menu-subcategory-title">Dinner Baskets</h4>
+                <div class="te-menu-items-grid">
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Brisket Sliders</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$14.00</span>
+                        </div>
+                        <div class="te-item-desc">3 Brisket Sliders Served with Kettle Chips</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Brisket Tacos</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$14.00</span>
+                        </div>
+                        <div class="te-item-desc">3 BBQ Brisket Tacos with BBQ Sauce, Onions, & Coleslaw on Flour
+                            Tortillas</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Hyena's Nachos</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$12.00</span>
+                        </div>
+                        <div class="te-item-desc">Tortilla Chips with Queso, Jalapeños, Guacamole; Add Brisket – $3
+                        </div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Chicken Tender Basket</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$13.00</span>
+                        </div>
+                        <div class="te-item-desc">Served with Fries</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Popcorn Shrimp</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$13.00</span>
+                        </div>
+                        <div class="te-item-desc">Served with Fries</div>
+                    </div>
+                </div>
+
+                <h4 class="te-menu-subcategory-title mt-8">Snacks & Munchies</h4>
+                <div class="te-menu-items-grid">
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Chips Trio</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$9.00</span>
+                        </div>
+                        <div class="te-item-desc">Tortilla Chips Served with Salsa, Guacamole, & Queso</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Fried Pickles</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$9.00</span>
+                        </div>
+                        <div class="te-item-desc">Served with Ranch</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Mozzarella Sticks</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$9.00</span>
+                        </div>
+                        <div class="te-item-desc">Served with Marinara</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Chicken Quesadilla</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$12.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Albuquerque Food -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-white uppercase border-b border-gray-700 pb-2">Albuquerque</h3>
+
+                <h4 class="te-menu-subcategory-title">Munchies</h4>
+                <div class="te-menu-items-grid">
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Nachos</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$10.00</span>
+                        </div>
+                        <div class="te-item-desc">Beef or Chicken. Topped with Queso, Jalapenos, & Sour Cream</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Boneless Wings (10)</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$12.00</span>
+                        </div>
+                        <div class="te-item-desc">BBQ, Buffalo, or Garlic Parmesan</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Mozzarella Sticks</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$9.00</span>
+                        </div>
+                        <div class="te-item-desc">Served with Marinara</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Chips & Salsa</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$5.00</span>
+                        </div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Chips & Queso</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$7.00</span>
+                        </div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Fried Pickles</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$9.00</span>
+                        </div>
+                        <div class="te-item-desc">Served with Ranch</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Edamame</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$9.00</span>
+                        </div>
+                        <div class="te-item-desc">Steamed Soybean Pods Topped with Salt</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Popcorn</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$6.00</span>
+                        </div>
+                        <div class="te-item-desc">Choice of Movie Butter or Featured Flavor</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPECIAL OFFER CALLOUT -->
+        <div class="te-menu-callout">
+            <h3>HAPPY HOUR (5-7PM)</h3>
+            <p>$5 Wells & Domestics</p>
+        </div>
+
+        <!-- DRINKS SECTION -->
+        <section id="drinks" class="te-menu-section">
+            <h2 class="te-menu-category-title">Drinks</h2>
+
+            <!-- Fort Worth Drinks -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-white uppercase border-b border-gray-700 pb-2">Fort Worth</h3>
+
+                <h4 class="te-menu-subcategory-title">Martinis</h4>
+                <div class="te-menu-items-grid">
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Kaufman Martini</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$12.00</span>
+                        </div>
+                        <div class="te-item-desc">Espresso Vodka, Stoli Vanilla, Coffee Liqueur</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Pink Lemon Tini</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$12.00</span>
+                        </div>
+                        <div class="te-item-desc">Deep Eddy Lemon Vodka, Deep Eddy Cranberry Vodka</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Apple Martini</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$12.00</span>
+                        </div>
+                        <div class="te-item-desc">Tito's Vodka, Apple Pucker, Sweet & Sour</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dallas Drinks -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-white uppercase border-b border-gray-700 pb-2">Dallas</h3>
+
+                <h4 class="te-menu-subcategory-title">Headliners (Cocktails)</h4>
+                <div class="te-menu-items-grid">
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Bill "Bloody" Murray</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$12.00</span>
+                        </div>
+                        <div class="te-item-desc">Bloody Mary with a Special 'Kick'</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Don Rickles</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$12.00</span>
+                        </div>
+                        <div class="te-item-desc">Classic Old Fashioned Made with Bulleit Rye</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Joan Rivers</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$12.00</span>
+                        </div>
+                        <div class="te-item-desc">Deep Eddy Cranberry Vodka, Peach Schnapps, & Lemonade</div>
+                    </div>
+                </div>
+
+                <h4 class="te-menu-subcategory-title mt-8">Beer</h4>
+                <div class="te-menu-items-grid">
+                    <!-- Domestic -->
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Domestic (Bud Light, Miller Lite)</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$6.00</span>
+                        </div>
+                    </div>
+                    <!-- Premium -->
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Premium (Corona, Dos XX)</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$7.00</span>
+                        </div>
+                    </div>
+                    <!-- Super Premium -->
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Deep Ellum IPA</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$8.00</span>
+                        </div>
+                    </div>
+                    <!-- Ultra Premium -->
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Lakewood Temptress</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$9.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Albuquerque Drinks -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-white uppercase border-b border-gray-700 pb-2">Albuquerque</h3>
+
+                <h4 class="te-menu-subcategory-title">Beer</h4>
+                <div class="te-menu-items-grid">
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Domestic (Bud, Coors, Miller, etc)</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$6.00</span>
+                        </div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Premium (Blue Moon, Corona, etc)</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$7.00</span>
+                        </div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Super Premium (Guinness, Truly, etc)</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$8.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="te-menu-subcategory-title mt-8">Amateur Night Virgin Drinks</h4>
+                <div class="te-menu-items-grid">
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Crazy Berry</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$8.00</span>
+                        </div>
+                        <div class="te-item-desc">Virgin Strawberry Daiquiri</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Giggle Juice</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$5.00</span>
+                        </div>
+                        <div class="te-item-desc">Coconut Flavored Fruit Punch</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Looney Tunes</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$8.00</span>
+                        </div>
+                        <div class="te-item-desc">Virgin Peach Pina Colada</div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Heineken 0.0</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$8.00</span>
+                        </div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Red Bull / SF Red Bull</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$6.00</span>
+                        </div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Topo Chico</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$4.00</span>
+                        </div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Soda / Juice</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$3.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESSERTS SECTION -->
+        <section id="desserts" class="te-menu-section">
+            <h2 class="te-menu-category-title">Desserts</h2>
+
+            <!-- Fort Worth -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-white uppercase border-b border-gray-700 pb-2">Fort Worth</h3>
+                <div class="te-menu-items-grid">
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Cheesecake</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$9.00</span>
+                        </div>
+                        <div class="te-item-desc">NY Style Cheesecake with Choice of Caramel, Chocolate, or Raspberry
+                        </div>
+                    </div>
+                    <div class="te-menu-item">
+                        <div class="te-menu-leader">
+                            <span class="te-item-name">Churros</span>
+                            <span class="te-menu-dots"></span>
+                            <span class="te-item-price">$7.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dallas/ABQ Note: No desserts listed in JSON -->
+            <div class="te-menu-callout">
+                <p class="text-sm opacity-60">Ask your server about dessert options at our Dallas and Albuquerque
+                    locations.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FLOATING ACTION BUTTON (PDF) -->
+    <div class="fab-download-container">
+        <a href="/menu/fort-worth-menu.pdf" class="te-btn te-btn-accent btn-fab" target="_blank">
+            <span class="font-bold">DOWNLOAD PDF</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="square" stroke-linejoin="miter">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="te-footer">
+        <div class="te-container">
+            <div class="te-footer-grid">
+                <div class="te-footer-col">
+                    <h4>HYENAS</h4>
+                    <p
+                        style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--te-gray-light); line-height: 1.6;">
+                        The premier comedy club experience in Texas and New Mexico since 1989.
+                    </p>
+                </div>
+                <div class="te-footer-col">
+                    <h4>LOCATIONS</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="/locations/dallas">Dallas</a></li>
+                        <li><a href="/locations/fortworth">Fort Worth</a></li>
+                        <li><a href="/locations/albuquerque">Albuquerque</a></li>
+                        <li><a href="/locations/redroom">Red Room</a></li>
+                    </ul>
+                </div>
+                <div class="te-footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="/shows">Upcoming Shows</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/private-events">Private Events</a></li>
+                    </ul>
+                </div>
+                <div class="te-footer-col">
+                    <h4>CONNECT</h4>
+                    <ul class="te-footer-links">
+                        <li><a href="https://facebook.com/hyenascomedy">Facebook</a></li>
+                        <li><a href="https://instagram.com/hyenascomedy">Instagram</a></li>
+                        <li><a href="https://twitter.com/hyenascomedy">Twitter</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="te-footer-bottom">
+                <div>© 2026 HYENAS COMEDY NIGHTCLUB. ALL RIGHTS RESERVED.</div>
+                <div>
+                    <a href="/privacy" style="margin-right: var(--space-4);">PRIVACY POLICY</a>
+                    <a href="/terms">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS for Mobile Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.te-menu-toggle');
+            const navMenu = document.querySelector('.te-nav-menu');
+
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+
+    <!-- JS for Sticky Nav Active State -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.te-tab-link');
+            const sections = document.querySelectorAll('.te-menu-section');
+
+            // Click handler (simple active switch)
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    e.target.classList.add('active');
+                });
+            });
+
+            // Scroll spy
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    // -200 offset for better feel
+                    if (pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                if (current) {
+                    tabs.forEach(tab => {
+                        tab.classList.remove('active');
+                        if (tab.getAttribute('href').includes(current)) {
+                            tab.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
