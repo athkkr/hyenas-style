@@ -1,0 +1,158 @@
+/*
+ * Hyenas Comedy Club - Global Custom Styles
+ * 
+ * HOSTING INSTRUCTIONS:
+ * 1. Upload this file to a GitHub repository or public host
+ * 2. Get the raw URL (or jsDelivr URL for GitHub)
+ * 3. Add to Webflow Page or Site Settings > Custom Code > Head Code:
+ *    <link rel="stylesheet" href="YOUR_URL_HERE">
+ *
+ * AESTHETIC: Teenage Engineering / Industrial Brutalism
+ * - Sharp corners
+ * - High contrast
+ * - Monospace or Grotesque sans-serif fonts
+ * - Safety orange accents
+ */
+
+/* =========================================
+   1. VARIABLES & DESIGN SYSTEM
+   ========================================= */
+:root {
+    /* Brand Colors */
+    --color-brand-orange: #ff4d00;
+    /* Safety Orange */
+    --color-brand-black: #1a1a1a;
+    --color-brand-gray: #333333;
+    --color-brand-light-gray: #e5e5e5;
+    --color-brand-white: #ffffff;
+
+    /* UI Colors */
+    --color-bg-page: #f0f0f0;
+    --color-bg-card: #ffffff;
+    --color-border: #000000;
+
+    /* Typography */
+    --font-stack-heading: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+    --font-stack-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+    /* Dimensions & Spacing */
+    --radius-sm: 0px;
+    /* Sharp corners for industrial look */
+    --radius-md: 4px;
+    --border-width-std: 1px;
+    --border-width-thick: 2px;
+
+    --spacing-unit: 8px;
+    /* Base unit */
+}
+
+/* =========================================
+   2. GLOBAL OVERRIDES
+   ========================================= */
+
+/* Ensure smooth font rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-bg-page);
+    color: var(--color-brand-black);
+}
+
+/* Selection color */
+::selection {
+    background: var(--color-brand-orange);
+    color: white;
+}
+
+/* =========================================
+   3. UTILITY CLASSES
+   ========================================= */
+
+/* Typography */
+.text-industrial-lg {
+    font-family: var(--font-stack-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+.text-industrial-mono {
+    font-family: var(--font-stack-mono);
+    font-size: 0.9em;
+    letter-spacing: -0.01em;
+}
+
+/* Borders & Shadows */
+.border-industrial {
+    border: var(--border-width-std) solid var(--color-border);
+}
+
+.shadow-industrial {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   4. COMPONENT STYLES
+   ========================================= */
+
+/* Primary Action Button */
+.btn-primary-industrial {
+    display: inline-block;
+    background-color: var(--color-brand-black);
+    color: var(--color-brand-white) !important;
+    padding: 12px 24px;
+    border: 1px solid var(--color-brand-black);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-stack-mono);
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-primary-industrial:hover {
+    background-color: var(--color-brand-orange);
+    border-color: var(--color-brand-orange);
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary/Ghost Button */
+.btn-secondary-industrial {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-brand-black) !important;
+    padding: 12px 24px;
+    border: 1px solid var(--color-brand-black);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-stack-mono);
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary-industrial:hover {
+    background-color: var(--color-brand-light-gray);
+    color: var(--color-brand-black) !important;
+}
+
+/* Event Card Container */
+.card-event-industrial {
+    background: var(--color-bg-card);
+    border: var(--border-width-std) solid var(--color-border);
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: var(--radius-sm);
+}
+
+.card-event-industrial:hover {
+    border-color: var(--color-brand-orange);
+}
+
+/* Mobile Visibility Helper */
+@media screen and (max-width: 767px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
